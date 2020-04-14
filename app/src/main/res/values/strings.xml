@@ -23,6 +23,7 @@
     <string name="btn_back">Back</string>
     <string name="btn_next">Next</string>
     <string name="btn_show">Show</string>
+    <string name="btn_skip">Skip</string>
 
     <!--TextView Texts-->
     <string name="tv_email">Email</string>
