@@ -108,146 +108,32 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <LinearLayout
+            <com.girlesc.hearme.CustomEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="16dp"
+                app:title="@string/tv_email"
+                android:hint="@string/et_email_hint"
+                android:inputType="textEmailAddress"
+                />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/seguisb"
-                    android:letterSpacing="0.2"
-                    android:text="@string/tv_email"
-                    android:textAllCaps="true"
-                    android:textColor="@color/colorSecondary"
-                    android:textSize="12sp" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="0dp"
-                    android:layout_marginRight="0dp"
-                    android:paddingTop="0dp"
-                    android:backgroundTint="@color/colorSecondary"
-                    android:fontFamily="@font/segoeui"
-                    android:hint="@string/et_email_hint"
-                    android:inputType="textEmailAddress"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="16sp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
+            <com.girlesc.hearme.CustomEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="16dp"
+                app:title="@string/tv_password"
+                android:hint="@string/et_password_hint"
+                android:inputType="textPassword"
+                />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/seguisb"
-                    android:letterSpacing="0.2"
-                    android:text="@string/tv_password"
-                    android:textAllCaps="true"
-                    android:textColor="@color/colorSecondary"
-                    android:textSize="12sp" />
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginRight="0dp"
-                        android:paddingTop="0dp"
-                        android:backgroundTint="@color/colorSecondary"
-                        android:fontFamily="@font/segoeui"
-                        android:hint="@string/et_password_hint"
-                        android:inputType="textPassword"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="16sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@android:color/transparent"
-                        android:fontFamily="@font/segoeuib"
-                        android:text="@string/btn_show"
-                        android:textAllCaps="true"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="12sp"
-                        android:includeFontPadding="false"
-                        android:visibility="gone"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
+            <com.girlesc.hearme.CustomEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginBottom="16dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/seguisb"
-                    android:letterSpacing="0.2"
-                    android:text="@string/tv_confirm_password"
-                    android:textAllCaps="true"
-                    android:textColor="@color/colorSecondary"
-                    android:textSize="12sp" />
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginRight="0dp"
-                        android:paddingTop="0dp"
-                        android:backgroundTint="@color/colorSecondary"
-                        android:fontFamily="@font/segoeui"
-                        android:hint="@string/et_confirm_password_hint"
-                        android:inputType="textPassword"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="16sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@android:color/transparent"
-                        android:fontFamily="@font/segoeuib"
-                        android:text="@string/btn_show"
-                        android:textAllCaps="true"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="12sp"
-                        android:includeFontPadding="false"
-                        android:visibility="gone"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </LinearLayout>
+                android:layout_marginBottom="16dp"
+                app:title="@string/tv_confirm_password"
+                android:hint="@string/et_confirm_password_hint"
+                android:inputType="textPassword"
+                />
 
         </LinearLayout>
 
