@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SignUpActivity"
-    android:padding="32dp"
-    android:background="@android:color/white">
+    android:padding="32dp">
 
     <RelativeLayout
         android:id="@+id/navigationSection"
@@ -134,6 +133,7 @@
                     android:backgroundTint="@color/colorSecondary"
                     android:fontFamily="@font/segoeui"
                     android:hint="@string/et_email_hint"
+                    android:inputType="textEmailAddress"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="16sp"/>
 
