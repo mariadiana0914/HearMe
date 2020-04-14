@@ -1,3 +1,38 @@
 <resources>
     <string name="app_name">HearMe</string>
+
+    <!--Welcome Activity Strings-->
+    <string name="welcome_activity_primary_greeting_text">Hello!</string>
+    <string name="welcome_activity_secondary_greeting_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam.</string>
+    <string name="welcome_activity_alternate_connection_text">Or connect using</string>
+
+    <!--Log In Activity Strings-->
+    <string name="log_in_activity_primary_greeting_text">Welcome Back!</string>
+    <string name="log_in_activity_secondary_greeting_text">Enter your login credentials to access the features of the app</string>
+    <string name="log_in_activity_redirect_to_sign_up">Don\'t have an account yet?</string>
+
+    <!--Sign Up Activity Strings-->
+    <string name="sign_up_activity_primary_greeting_text">Join the community!</string>
+    <string name="sign_up_activity_secondary_greeting_text">Enter your new account credentials to access the features of the app</string>
+    <string name="sign_up_activity_redirect_to_log_in">Already have an account?</string>
+
+    <!--Generic Views-->
+    <!--Button-->
+    <string name="btn_log_in">Log In</string>
+    <string name="btn_sign_up">Sign Up</string>
+    <string name="btn_back">Back</string>
+    <string name="btn_next">Next</string>
+    <string name="btn_show">Show</string>
+
+    <!--TextView Texts-->
+    <string name="tv_email">Email</string>
+    <string name="tv_password">Password</string>
+    <string name="tv_confirm_password">Confirm Password</string>
+    <string name="tv_forgot_password">Forgot password</string>
+
+    <!--EditText Hints-->
+    <string name="et_email_hint">something@something.com</string>
+    <string name="et_password_hint">At least 8 characters</string>
+    <string name="et_confirm_password_hint">Your password should match</string>
+
 </resources>
