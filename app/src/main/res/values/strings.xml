@@ -30,10 +30,16 @@
     <string name="tv_password">Password</string>
     <string name="tv_confirm_password">Confirm Password</string>
     <string name="tv_forgot_password">Forgot password</string>
+    <string name="tv_first_name">First Name</string>
+    <string name="tv_last_name">Last Name</string>
+    <string name="tv_mobile_phone_number">Mobile Phone Number</string>
 
     <!--EditText Hints-->
     <string name="et_email_hint">something@something.com</string>
     <string name="et_password_hint">At least 8 characters</string>
     <string name="et_confirm_password_hint">Your password should match</string>
+    <string name="et_first_name_hint">Jane</string>
+    <string name="et_last_name_hint">Doe</string>
+    <string name="et_phone_number">123-456-7890</string>
 
 </resources>
