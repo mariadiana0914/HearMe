@@ -64,6 +64,10 @@ public class CustomEditText extends LinearLayout {
             styleAttributesArray.recycle();
         }
 
+        mTitleTV = findViewById(R.id.titleTV);
+        mFieldET = findViewById(R.id.fieldET);
+        mShowBtn = findViewById(R.id.showBtn);
+
         Typeface mTypeface = mFieldET.getTypeface();
 
         mTitleTV.setText(mTitle);
