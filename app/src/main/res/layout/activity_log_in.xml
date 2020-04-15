@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LogInActivity"
+    tools:context=".activities.LogInActivity"
     android:padding="32dp">
 
     <RelativeLayout
@@ -100,7 +100,7 @@
 
         </LinearLayout>
 
-        <com.girlesc.hearme.CustomEditText
+        <com.girlesc.hearme.views.CustomEditText
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_marginBottom="16dp"
@@ -109,7 +109,7 @@
             android:inputType="textEmailAddress"
             app:title="@string/tv_email"/>
 
-        <com.girlesc.hearme.CustomEditText
+        <com.girlesc.hearme.views.CustomEditText
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_marginBottom="16dp"

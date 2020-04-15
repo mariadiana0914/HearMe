@@ -1,4 +1,4 @@
-package com.girlesc.hearme;
+package com.girlesc.hearme.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.girlesc.hearme.R;
 
 public class WelcomeActivity extends AppCompatActivity {
     private Button logInBtn;

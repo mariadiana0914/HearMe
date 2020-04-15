@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TutorialActivity"
+    tools:context=".activities.TutorialActivity"
     android:padding="32dp">
 
 
@@ -18,102 +18,100 @@
         android:textColor="@color/colorSecondary"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-
-
-    <RelativeLayout
-        android:id="@+id/scrollSection"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-
-        >
-        <ImageView
-            android:layout_width="32dp"
-            android:layout_height="8dp"
-            android:layout_centerVertical="true"/>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_alignParentEnd="true"
-        android:gravity="center_vertical">
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/segoeuib"
-            android:includeFontPadding="false"
-            android:text="@string/btn_next"
-            android:textAllCaps="false"
-            android:textColor="@color/colorPrimary"
-            android:textSize="16sp"
-
-            />
-
-        <ImageView
-            android:layout_width="12dp"
-            android:layout_height="12dp"
-            android:scaleType="fitCenter"
-            android:background="@drawable/ic_arrow"
-            android:layout_marginTop="1dp"
-            android:rotation="180"
-            />
-
-    </LinearLayout>
-
-</RelativeLayout>
-
-
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@id/scrollSection"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:gravity="center_horizontal"
-        android:layout_marginBottom="64dp">
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toTopOf="@id/navigationSection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
 
         <ImageView
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:background="@drawable/ic_logo_inverted"
-            android:layout_marginBottom="8dp"
-            />
+            android:src="@drawable/ic_logo_inverted"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_marginBottom="8dp"/>
 
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Welcome to HearMe!"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Lorem ipsum amet consectetuer"
+            android:textAlignment="center"
             android:fontFamily="@font/segoeuib"
-            android:textSize="32sp"
+            android:textSize="28sp"
             android:textColor="@color/colorPrimaryDark"
             android:layout_marginBottom="16dp"
             android:textAllCaps="false"/>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="32dp"
-            android:layout_marginRight="32dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             android:layout_marginBottom="32dp"
             android:textAlignment="center"
             android:textSize="16sp"
             android:fontFamily="@font/segoeuisl"
             android:lineSpacingMultiplier="1.1"
-            android:text="@string/welcome_activity_secondary_greeting_text"
+            android:text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy."
             android:textColor="@color/colorPrimaryDark"
             android:alpha=".75"/>
 
 
     </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/navigationSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="8dp"
+            android:layout_centerVertical="true"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeuib"
+                android:includeFontPadding="false"
+                android:text="@string/btn_next"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:scaleType="fitCenter"
+                android:background="@drawable/ic_arrow"
+                android:layout_marginTop="1dp"
+                android:rotation="180"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

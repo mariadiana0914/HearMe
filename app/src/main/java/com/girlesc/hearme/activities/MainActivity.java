@@ -1,15 +1,16 @@
-package com.girlesc.hearme;
+package com.girlesc.hearme.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class TutorialActivity extends AppCompatActivity {
-    private
+import com.girlesc.hearme.R;
+
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tutorial);
+        setContentView(R.layout.activity_main);
     }
 }

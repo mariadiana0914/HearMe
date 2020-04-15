@@ -1,8 +1,10 @@
-package com.girlesc.hearme;
+package com.girlesc.hearme.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.girlesc.hearme.R;
 
 public class SignUpActivity extends AppCompatActivity {
 

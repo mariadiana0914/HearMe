@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpActivity"
+    tools:context=".activities.SignUpActivity"
     android:padding="32dp">
 
     <RelativeLayout
@@ -108,7 +108,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <com.girlesc.hearme.CustomEditText
+            <com.girlesc.hearme.views.CustomEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
@@ -117,7 +117,7 @@
                 android:inputType="textEmailAddress"
                 />
 
-            <com.girlesc.hearme.CustomEditText
+            <com.girlesc.hearme.views.CustomEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
@@ -126,7 +126,7 @@
                 android:inputType="textPassword"
                 />
 
-            <com.girlesc.hearme.CustomEditText
+            <com.girlesc.hearme.views.CustomEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
