@@ -21,57 +21,56 @@
         />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/icon"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icon">
 
         <TextView
             android:id="@+id/greeting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
             android:fontFamily="@font/segoeuib"
             android:text="Setting up\nyour account"
+            android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="28sp"
-            android:textAlignment="center"
-            android:layout_marginBottom="32dp"
 
             />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="2"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:weightSum="2">
 
 
             <com.girlesc.hearme.views.CustomEditText
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
-                app:title="@string/tv_first_name"
+                android:layout_weight="1"
                 android:hint="@string/et_first_name_hint"
                 android:inputType="textPersonName"
-                android:layout_marginEnd="16dp"
-                />
+                app:title="@string/tv_first_name" />
 
             <com.girlesc.hearme.views.CustomEditText
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
                 android:layout_marginBottom="16dp"
-                app:title="@string/tv_last_name"
+                android:layout_weight="1"
                 android:hint="@string/et_last_name_hint"
                 android:inputType="textPersonName"
-                android:layout_marginStart="16dp"
-                />
+                app:title="@string/tv_last_name" />
 
         </LinearLayout>
 
@@ -84,6 +83,7 @@
                 android:id="@+id/titleTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
                 android:fontFamily="@font/seguisb"
                 android:letterSpacing="0.2"
                 android:text="@string/tv_mobile_phone_number"
@@ -99,9 +99,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@color/colorSecondary"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -112,8 +112,141 @@
     </LinearLayout>
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@id/privacyPolicy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <CheckBox
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="16dp"
+            />
 
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/seguisb"
+            android:text="I confirm that I have read and accepted the Terms and Conditions."
+            android:textAllCaps="false"
+            android:textColor="@color/colorSecondary"
+            android:textSize="14sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/privacyPolicy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toTopOf="@id/consentAI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp">
+
+        <CheckBox
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="16dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/seguisb"
+            android:text="I have read and agreed to the Privacy Policy."
+            android:textAllCaps="false"
+            android:textColor="@color/colorSecondary"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/consentAI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toTopOf="@id/nextScreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <CheckBox
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="16dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/seguisb"
+            android:text="I consent to HearMe analyzing the personal data I supply and create an account to access the voice recognition and conversation labeling functionalities."
+            android:textAllCaps="false"
+            android:textColor="@color/colorSecondary"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+
+<RelativeLayout
+    android:id="@+id/nextScreen"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+>
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="8dp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_vertical"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/segoeuib"
+            android:includeFontPadding="false"
+            android:text="@string/btn_next"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:scaleType="fitCenter"
+            android:background="@drawable/ic_arrow"
+            android:layout_marginTop="1dp"
+            android:rotation="180"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
 
 
 
