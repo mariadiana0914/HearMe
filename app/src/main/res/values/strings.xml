@@ -33,6 +33,9 @@
     <string name="tv_first_name">First Name</string>
     <string name="tv_last_name">Last Name</string>
     <string name="tv_mobile_phone_number">Mobile Phone Number</string>
+    <string name="tv_terms_and_conditions"> I confirm that I have read and accepted the <a> Terms and Conditions. </a> </string>
+    <string name="tv_privacy_policy">I have read and agreed to the <a> Privacy Policy.</a></string>
+    <string name="tv_personal_data_consent">I consent to HearMe analyzing the personal data I supply and create an account to access the voice recognition and conversation labeling functionalities.</string>
 
     <!--EditText Hints-->
     <string name="et_email_hint">something@something.com</string>

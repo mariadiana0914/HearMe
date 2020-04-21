@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
-            android:id="@+id/backBtn"
+            android:id="@+id/backFromLogInBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -188,6 +188,7 @@
                 android:textSize="16sp"/>
 
             <TextView
+                android:id="@+id/signUpFromLogInBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"

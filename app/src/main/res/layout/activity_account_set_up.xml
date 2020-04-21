@@ -127,6 +127,7 @@
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_marginEnd="16dp"
+            android:buttonTint="@color/colorPrimary"
             />
 
 
@@ -134,7 +135,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/seguisb"
-            android:text="I confirm that I have read and accepted the Terms and Conditions."
+            android:text="@string/tv_terms_and_conditions"
             android:textAllCaps="false"
             android:textColor="@color/colorSecondary"
             android:textSize="14sp"
@@ -157,20 +158,19 @@
         <CheckBox
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:layout_marginEnd="16dp" />
-
-
+            android:layout_marginEnd="16dp"
+            android:buttonTint="@color/colorPrimary"/>
+        
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/seguisb"
-            android:text="I have read and agreed to the Privacy Policy."
+            android:text="@string/tv_privacy_policy"
             android:textAllCaps="false"
             android:textColor="@color/colorSecondary"
             android:textSize="14sp" />
 
     </LinearLayout>
-
 
     <LinearLayout
         android:id="@+id/consentAI"
@@ -186,21 +186,19 @@
         <CheckBox
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:layout_marginEnd="16dp" />
-
+            android:layout_marginEnd="16dp"
+            android:buttonTint="@color/colorPrimary"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/seguisb"
-            android:text="I consent to HearMe analyzing the personal data I supply and create an account to access the voice recognition and conversation labeling functionalities."
+            android:text="@string/tv_personal_data_consent"
             android:textAllCaps="false"
             android:textColor="@color/colorSecondary"
             android:textSize="14sp" />
 
     </LinearLayout>
-
-
 
 <RelativeLayout
     android:id="@+id/nextScreen"
@@ -225,7 +223,6 @@
         android:gravity="center_vertical"
         >
 
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -247,9 +244,6 @@
     </LinearLayout>
 
 </RelativeLayout>
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
