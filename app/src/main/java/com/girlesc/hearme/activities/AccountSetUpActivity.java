@@ -1,7 +1,11 @@
 package com.girlesc.hearme.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -10,32 +14,37 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import com.girlesc.hearme.R;
+import com.girlesc.hearme.adapters.SectionsPagerAdapter;
+import com.girlesc.hearme.fragments.AccountDetailsSetUpFragment;
 
 public class AccountSetUpActivity extends AppCompatActivity {
-    LinearLayout prefixBtn;
-    TextView prefixTV;
-
+  private ViewPager viewPager;
+  private SectionsPagerAdapter pagerAdapter;
+  private LinearLayout nextBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account_set_up);
-
-        prefixBtn=findViewById(R.id.phonePrefixBtn);
-        prefixTV=findViewById(R.id.phonePrefixTV);
-        prefixBtn.setOnClickListener(new View.OnClickListener() {
+        viewPager= findViewById(R.id.viewPager);
+        nextBtn= findViewById(R.id.nextBtn);
+        pagerAdapter= new SectionsPagerAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        pagerAdapter.addFragment(new AccountDetailsSetUpFragment());
+       viewPager.setAdapter(pagerAdapter);
+        nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PopupMenu menu;
-                menu=new PopupMenu(AccountSetUpActivity.this, v);
-                menu.inflate(R.menu.menu_phone_number_prefixes);
-                menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    @Override
-                    public boolean onMenuItemClick(MenuItem item) {
-                        prefixTV.setText(item.getTitle());
-                        return true;
-                    }
-                });
-                menu.show();
+                int position = viewPager.getCurrentItem() + 1;
+
+                if (position != viewPager.getChildCount() - 1)
+                {
+                    viewPager.setCurrentItem(position);
+                }
+                else
+                {
+                    Intent intent = new Intent(AccountSetUpActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
     }
