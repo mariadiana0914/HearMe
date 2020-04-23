@@ -4,19 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.TutorialActivity"
-    android:padding="32dp">
-
-
+    android:padding="32dp"
+    tools:context=".activities.TutorialActivity">
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/navigationSection"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/skipBtn"
@@ -29,7 +27,7 @@
         android:textColor="@color/colorSecondary"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <RelativeLayout
@@ -37,22 +35,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
             android:layout_width="32dp"
             android:layout_height="8dp"
-            android:layout_centerVertical="true"/>
+            android:layout_centerVertical="true" />
 
         <LinearLayout
             android:id="@+id/nextBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_alignParentEnd="true"
-            android:gravity="center_vertical">
-
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -62,15 +59,15 @@
                 android:text="@string/btn_next"
                 android:textAllCaps="false"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"/>
+                android:textSize="16sp" />
 
             <ImageView
                 android:layout_width="12dp"
                 android:layout_height="12dp"
-                android:scaleType="fitCenter"
-                android:background="@drawable/ic_arrow"
                 android:layout_marginTop="1dp"
-                android:rotation="180"/>
+                android:background="@drawable/ic_arrow"
+                android:rotation="180"
+                android:scaleType="fitCenter" />
 
         </LinearLayout>
 

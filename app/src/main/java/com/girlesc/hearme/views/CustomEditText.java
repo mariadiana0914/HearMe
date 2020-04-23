@@ -59,8 +59,7 @@ public class CustomEditText extends LinearLayout {
             mTitle = styleAttributesArray.getString(R.styleable.CustomEditText_title);
             mHint = styleAttributesArray.getString(R.styleable.CustomEditText_android_hint);
             mInputType = styleAttributesArray.getInt(R.styleable.CustomEditText_android_inputType, InputType.TYPE_CLASS_TEXT);
-        }
-        finally {
+        } finally {
             styleAttributesArray.recycle();
         }
 

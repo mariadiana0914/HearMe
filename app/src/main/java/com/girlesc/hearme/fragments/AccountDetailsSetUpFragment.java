@@ -20,28 +20,31 @@ public class AccountDetailsSetUpFragment extends Fragment {
 
     private LinearLayout prefixBtn;
     private TextView prefixTV;
+    private PopupMenu phonePrefixMenu;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view;
-        view = inflater.inflate(R.layout.fragment_tutorial, container, false );
-        prefixBtn=view.findViewById(R.id.phonePrefixBtn);
-        prefixTV=view.findViewById(R.id.phonePrefixTV);
+        view = inflater.inflate(R.layout.fragment_account_detail_set_up, container, false);
+
+        prefixBtn = view.findViewById(R.id.phonePrefixBtn);
+        prefixTV = view.findViewById(R.id.phonePrefixTV);
+
+        phonePrefixMenu = new PopupMenu(getContext(), prefixBtn);
+        phonePrefixMenu.inflate(R.menu.menu_phone_number_prefixes);
+        phonePrefixMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                prefixTV.setText(menuItem.getTitle());
+                return true;
+            }
+        });
+
         prefixBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PopupMenu menu;
-                menu=new PopupMenu(getContext(), v);
-                menu.inflate(R.menu.menu_phone_number_prefixes);
-                menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    @Override
-                    public boolean onMenuItemClick(MenuItem item) {
-                        prefixTV.setText(item.getTitle());
-                        return true;
-                    }
-                });
-                menu.show();
+                phonePrefixMenu.show();
             }
         });
         return view;

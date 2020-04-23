@@ -32,35 +32,12 @@ public class TutorialFragment extends Fragment {
         this.imageId = imageId;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public int getImageId() {
-        return imageId;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public void setImageId(int imageId) {
-        this.imageId = imageId;
-    }
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view;
-        view = inflater.inflate(R.layout.fragment_tutorial, container, false );
+        view = inflater.inflate(R.layout.fragment_tutorial, container, false);
+
         titleTV = view.findViewById(R.id.titleTV);
         descriptionTV = view.findViewById(R.id.descriptionTV);
         imageIV = view.findViewById(R.id.tutorialImage);
@@ -70,7 +47,6 @@ public class TutorialFragment extends Fragment {
         imageIV.setImageResource(this.imageId);
 
         return view;
-
     }
 
 }

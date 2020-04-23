@@ -4,44 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.LogInActivity"
-    android:padding="32dp">
+    android:padding="32dp"
+    tools:context=".activities.LogInActivity">
 
     <RelativeLayout
         android:id="@+id/navigationSection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:id="@+id/backFromLogInBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-            >
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="12dp"
                 android:layout_height="12dp"
-                android:scaleType="fitCenter"
-                android:background="@drawable/ic_arrow"
                 android:layout_marginTop="1dp"
-                />
+                android:background="@drawable/ic_arrow"
+                android:scaleType="fitCenter" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeuib"
                 android:includeFontPadding="false"
                 android:text="@string/btn_back"
                 android:textAllCaps="false"
-                android:fontFamily="@font/segoeuib"
                 android:textColor="@color/colorSecondary"
-                android:textSize="16sp"/>
+                android:textSize="16sp" />
 
         </LinearLayout>
 
@@ -50,14 +48,12 @@
             android:layout_height="40dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:src="@drawable/ic_logo"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
-            />
+            android:src="@drawable/ic_logo" />
 
 
     </RelativeLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -72,9 +68,9 @@
             android:id="@+id/welcomeSection"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="64dp"
             android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:layout_marginBottom="64dp">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -97,26 +93,25 @@
                 android:textColor="@color/colorSecondary"
                 android:textSize="16sp" />
 
-
         </LinearLayout>
 
         <com.girlesc.hearme.views.CustomEditText
-            android:layout_height="wrap_content"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:orientation="vertical"
             android:hint="@string/et_email_hint"
             android:inputType="textEmailAddress"
-            app:title="@string/tv_email"/>
+            android:orientation="vertical"
+            app:title="@string/tv_email" />
 
         <com.girlesc.hearme.views.CustomEditText
-            android:layout_height="wrap_content"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:orientation="vertical"
             android:hint="@string/et_password_hint"
             android:inputType="textPassword"
-            app:title="@string/tv_password"/>
+            android:orientation="vertical"
+            app:title="@string/tv_password" />
 
         <LinearLayout
             android:id="@+id/forgotPasswordBtn"
@@ -129,10 +124,9 @@
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:layout_marginEnd="8dp"
-                android:src="@drawable/ic_forgot_password"
-                android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                />
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_forgot_password" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -152,12 +146,11 @@
         android:id="@+id/bottomSection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        >
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:layout_width="match_parent"
@@ -165,14 +158,13 @@
             android:layout_marginLeft="48dp"
             android:layout_marginRight="48dp"
             android:layout_marginBottom="16dp"
-            android:text="@string/btn_log_in"
-            android:textAllCaps="false"
-            android:fontFamily="@font/segoeuib"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
             android:background="@drawable/bg_button_focused"
             android:elevation="4dp"
-            />
+            android:fontFamily="@font/segoeuib"
+            android:text="@string/btn_log_in"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -182,10 +174,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/log_in_activity_redirect_to_sign_up"
                 android:fontFamily="@font/seguisb"
+                android:text="@string/log_in_activity_redirect_to_sign_up"
                 android:textColor="@color/colorSecondary"
-                android:textSize="16sp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/signUpFromLogInBtn"
@@ -193,10 +185,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:background="@android:color/transparent"
+                android:fontFamily="@font/segoeuib"
                 android:text="@string/btn_sign_up"
                 android:textAllCaps="false"
-                android:fontFamily="@font/segoeuib"
-                android:textColor="@color/colorPrimaryDark"/>
+                android:textColor="@color/colorPrimaryDark" />
 
         </LinearLayout>
 

@@ -31,7 +31,7 @@ public class TutorialActivity extends AppCompatActivity {
         nextBtn = findViewById(R.id.nextBtn);
         skipBtn = findViewById(R.id.skipBtn);
 
-        pagerAdapter=new SectionsPagerAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        pagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         pagerAdapter.addFragment(new TutorialFragment("Lorem ipsum amet consectetuer", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.", R.drawable.ic_launcher_background));
         pagerAdapter.addFragment(new TutorialFragment("Lorem ipsum amet consectetuer", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.", R.drawable.ic_launcher_background));
         pagerAdapter.addFragment(new TutorialFragment("Lorem ipsum amet consectetuer", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.", R.drawable.ic_launcher_background));
@@ -42,15 +42,12 @@ public class TutorialActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int position = viewPager.getCurrentItem() + 1;
 
-                if (position != viewPager.getChildCount() - 1)
-                {
+                if (position <= viewPager.getChildCount() - 1) {
                     viewPager.setCurrentItem(position);
-                }
-                else
-                {
-                   Intent intent = new Intent(TutorialActivity.this, WelcomeActivity.class);
-                   startActivity(intent);
-                   finish();
+                } else {
+                    Intent intent = new Intent(TutorialActivity.this, WelcomeActivity.class);
+                    startActivity(intent);
+                    finish();
                 }
             }
         });

@@ -2,22 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/ro"
-        android:title="RO +40"
-        />
+        android:title="RO +40" />
     <item
         android:id="@+id/hu"
-        android:title="HU +36"
-        />
+        android:title="HU +36" />
     <item
         android:id="@+id/de"
-        android:title="DE +49"
-        />
+        android:title="DE +49" />
     <item
         android:id="@+id/usa"
-        android:title="USA +1"
-        />
+        android:title="USA +1" />
     <item
         android:id="@+id/md"
-        android:title="MD +373"
-        />
+        android:title="MD +373" />
 </menu>

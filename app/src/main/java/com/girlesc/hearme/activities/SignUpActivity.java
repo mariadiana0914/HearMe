@@ -22,30 +22,30 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        backFromSignUpBtn=findViewById(R.id.backFromSignUpBtn);
+        backFromSignUpBtn = findViewById(R.id.backFromSignUpBtn);
         backFromSignUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(SignUpActivity.this,WelcomeActivity.class);
+                Intent intent = new Intent(SignUpActivity.this, WelcomeActivity.class);
                 startActivity(intent);
                 finish();
             }
         });
 
-        signUpToSetUpBtn=findViewById(R.id.signUpToSetUpBtn);
+        signUpToSetUpBtn = findViewById(R.id.signUpToSetUpBtn);
         signUpToSetUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(SignUpActivity.this,AccountSetUpActivity.class);
+                Intent intent = new Intent(SignUpActivity.this, AccountSetUpActivity.class);
                 startActivity(intent);
             }
         });
 
-        logInFromSignUpBtn=findViewById(R.id.logInFromSignUpBtn);
+        logInFromSignUpBtn = findViewById(R.id.logInFromSignUpBtn);
         logInFromSignUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(SignUpActivity.this,LogInActivity.class);
+                Intent intent = new Intent(SignUpActivity.this, LogInActivity.class);
                 startActivity(intent);
             }
         });
