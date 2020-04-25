@@ -107,9 +107,10 @@
             android:layout_height="wrap_content"
             android:text="The code you have entered is incorrect"
             android:textSize="16sp"
-            android:fontFamily="@font/segoeuisl"
-            //android:textColor=""
-            //android:visibility="gone"
+            android:fontFamily="@font/segoeuisl"/>
+           <!-- android:textColor=""
+            android:visibility="gone"-->
+
     </LinearLayout>
 
     <LinearLayout
