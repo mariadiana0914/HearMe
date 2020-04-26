@@ -37,6 +37,7 @@
     <string name="tv_privacy_policy">I have read and agreed to the <a> Privacy Policy.</a></string>
     <string name="tv_personal_data_consent">I consent to HearMe analyzing the personal data I supply and create an account to access the voice recognition and conversation labeling functionalities.</string>
 
+
     <!--EditText Hints-->
     <string name="et_email_hint">something@something.com</string>
     <string name="et_password_hint">At least 8 characters</string>
