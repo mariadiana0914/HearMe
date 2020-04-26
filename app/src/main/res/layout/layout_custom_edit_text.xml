@@ -2,55 +2,63 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:id="@+id/titleTV"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
         android:layout_height="wrap_content"
-        android:fontFamily="@font/seguisb"
-        android:letterSpacing="0.15"
-        android:text="@string/tv_password"
-        android:textAllCaps="true"
-        android:textColor="@color/colorSecondary"
-        android:textSize="12sp" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <EditText
-            android:id="@+id/fieldET"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="0dp"
-            android:backgroundTint="@color/colorSecondary"
-            android:fontFamily="@font/segoeui"
-            android:hint="@string/et_confirm_password_hint"
-            android:inputType="textPassword"
-            android:letterSpacing="0"
-            android:paddingTop="0dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/showBtn"
+            android:id="@+id/titleTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/segoeuib"
-            android:includeFontPadding="false"
-            android:text=""
+            android:fontFamily="@font/seguisb"
+            android:letterSpacing="0.15"
+            android:text="@string/tv_password"
             android:textAllCaps="true"
-            android:textColor="@color/colorPrimary"
-            android:textSize="12sp"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textColor="@color/colorSecondary"
+            android:textSize="12sp" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/fieldET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:backgroundTint="@color/colorSecondary"
+                android:fontFamily="@font/segoeui"
+                android:hint="@string/et_confirm_password_hint"
+                android:inputType="textPassword"
+                android:letterSpacing="0"
+                android:paddingTop="0dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/showBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/segoeuib"
+                android:includeFontPadding="false"
+                android:text=""
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
 
 </merge>
