@@ -45,5 +45,8 @@
     <string name="et_first_name_hint">Jane</string>
     <string name="et_last_name_hint">Doe</string>
     <string name="et_phone_number">123-456-7890</string>
+    <string name="title_activity_map">Map</string>
+    <string name="location_permission_denied">Please try again and grant access to use the location.</string>
+    <string name="permission_required_toast">Location permission is required.</string>
 
 </resources>
