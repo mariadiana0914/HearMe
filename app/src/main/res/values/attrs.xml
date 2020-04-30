@@ -5,4 +5,20 @@
         <attr name="android:hint" />
         <attr name="android:inputType" />
     </declare-styleable>
+    <declare-styleable name="CustomTabLayout">
+        <attr name="indicator_width" format="dimension" />
+        <attr name="indicator_height" format="dimension" />
+        <attr name="indicator_margin" format="dimension" />
+        <attr name="indicator_animator" format="reference" />
+        <attr name="indicator_animator_reverse" format="reference" />
+        <attr name="indicator_drawable" format="reference" />
+        <attr name="indicator_drawable_selected" format="reference" />
+        <attr name="indicator_width_selected" format="dimension" />
+        <attr name="indicator_height_selected" format="dimension" />
+
+        <attr name="indicator_orientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+    </declare-styleable>
 </resources>

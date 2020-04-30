@@ -14,6 +14,8 @@ import android.widget.TextView;
 import com.girlesc.hearme.R;
 import com.girlesc.hearme.adapters.SectionsPagerAdapter;
 import com.girlesc.hearme.fragments.TutorialFragment;
+import com.girlesc.hearme.views.CustomTabLayout;
+import com.google.android.material.tabs.TabLayout;
 
 public class TutorialActivity extends AppCompatActivity {
 
@@ -21,6 +23,7 @@ public class TutorialActivity extends AppCompatActivity {
     SectionsPagerAdapter pagerAdapter;
     LinearLayout nextBtn;
     TextView skipBtn;
+    CustomTabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +33,16 @@ public class TutorialActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPager);
         nextBtn = findViewById(R.id.nextBtn);
         skipBtn = findViewById(R.id.skipBtn);
+        tabLayout = findViewById(R.id.tabLayout);
 
         pagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         pagerAdapter.addFragment(new TutorialFragment("Lorem ipsum amet consectetuer", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.", R.drawable.ic_launcher_background));
         pagerAdapter.addFragment(new TutorialFragment("Lorem ipsum amet consectetuer", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.", R.drawable.ic_launcher_background));
         pagerAdapter.addFragment(new TutorialFragment("Lorem ipsum amet consectetuer", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.", R.drawable.ic_launcher_background));
+
         viewPager.setAdapter(pagerAdapter);
+
+        tabLayout.setupWithViewPager(viewPager);
 
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override

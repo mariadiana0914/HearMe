@@ -32,6 +32,13 @@ public class TutorialFragment extends Fragment {
         this.imageId = imageId;
     }
 
+    public TutorialFragment(int contentLayoutId, String title, String description, int imageId) {
+        super(contentLayoutId);
+        this.title = title;
+        this.description = description;
+        this.imageId = imageId;
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

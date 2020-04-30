@@ -51,8 +51,7 @@ public class CustomEditText extends LinearLayout {
         mContext = context;
 
         setOrientation(VERTICAL);
-        LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.layout_custom_edit_text, this, true);
+        LayoutInflater.from(mContext).inflate(R.layout.layout_custom_edit_text, this, true);
 
         TypedArray styleAttributesArray = context.obtainStyledAttributes(attrs, R.styleable.CustomEditText);
         try {

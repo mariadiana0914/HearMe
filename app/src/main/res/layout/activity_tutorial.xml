@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/navigationSection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,10 +38,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <ImageView
-            android:layout_width="32dp"
-            android:layout_height="8dp"
-            android:layout_centerVertical="true" />
+        <com.girlesc.hearme.views.CustomTabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:indicator_drawable="@drawable/tab_item_selected"
+            app:indicator_drawable_selected="@drawable/tab_item_selected"
+            app:indicator_height="8dp"
+            app:indicator_height_selected="8dp"
+            app:indicator_margin="4dp"
+            app:indicator_orientation="horizontal"
+            app:indicator_width="8dp"
+            app:indicator_width_selected="32dp"
+            app:layout_constraintBottom_toBottomOf="@id/nextBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/nextBtn" />
+
 
         <LinearLayout
             android:id="@+id/nextBtn"
@@ -49,7 +61,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -71,6 +86,6 @@
 
         </LinearLayout>
 
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
