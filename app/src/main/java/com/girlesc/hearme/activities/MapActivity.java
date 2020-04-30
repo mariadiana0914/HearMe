@@ -26,6 +26,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MapActivity extends AppCompatActivity
@@ -138,7 +139,7 @@ public class MapActivity extends AppCompatActivity
     }
 
     private void addHeatMap() {
-        List<LatLng> list = null;
+        List<LatLng> list = new ArrayList<>();
 
         list.add(new LatLng(-37.1886,145.708));
         list.add(new LatLng(-37.8361,144.845));
