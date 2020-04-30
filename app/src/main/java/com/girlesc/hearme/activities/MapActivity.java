@@ -7,6 +7,10 @@ import com.google.android.gms.maps.GoogleMap.OnMyLocationButtonClickListener;
 import com.google.android.gms.maps.GoogleMap.OnMyLocationClickListener;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.TileOverlay;
+import com.google.android.gms.maps.model.TileOverlayOptions;
+import com.google.maps.android.heatmaps.HeatmapTileProvider;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -17,7 +21,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
+
+import java.util.List;
 
 public class MapActivity extends AppCompatActivity
         implements
@@ -31,6 +40,11 @@ public class MapActivity extends AppCompatActivity
     private boolean mPermissionDenied = false;
 
     private GoogleMap mMap;
+    private Button mSosBtn;
+    private HeatmapTileProvider mProvider;
+    private TileOverlay mOverlay;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +54,14 @@ public class MapActivity extends AppCompatActivity
         SupportMapFragment mapFragment =
                 (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        mSosBtn = findViewById(R.id.sosBtn);
+        mSosBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MapActivity.this, "Orice mesaj", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     @Override
@@ -49,6 +71,7 @@ public class MapActivity extends AppCompatActivity
         mMap.setOnMyLocationButtonClickListener(this);
         mMap.setOnMyLocationClickListener(this);
         enableMyLocation();
+        addHeatMap();
     }
 
     private void enableMyLocation() {
@@ -109,12 +132,27 @@ public class MapActivity extends AppCompatActivity
         }
     }
 
-    /**
-     * Displays a dialog with error message explaining that the location permission is missing.
-     */
     private void showMissingPermissionError() {
         PermissionUtils.PermissionDeniedDialog
                 .newInstance(true).show(getSupportFragmentManager(), "dialog");
     }
+
+    private void addHeatMap() {
+        List<LatLng> list = null;
+
+        list.add(new LatLng(-37.1886,145.708));
+        list.add(new LatLng(-37.8361,144.845));
+        list.add(new LatLng(-38.4034,144.192));
+        list.add(new LatLng(-38.7597,143.67 ));
+        list.add(new LatLng(-36.9672,141.083));
+
+
+        mProvider = new HeatmapTileProvider.Builder()
+                .data(list)
+                .build();
+        // Add a tile overlay to the map, using the heat map tile provider.
+        mOverlay = mMap.addTileOverlay(new TileOverlayOptions().tileProvider(mProvider));
+    }
+
 
 }
