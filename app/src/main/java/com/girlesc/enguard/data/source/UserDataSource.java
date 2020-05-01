@@ -3,11 +3,11 @@ package com.girlesc.enguard.data.source;
 import com.girlesc.enguard.data.User;
 
 public interface UserDataSource {
-    interface GetUserCallback {
-        void onUserLoaded(User user);
+    interface OnLogInCallback {
+        void onSuccess();
 
-        void onDataNotAvailable();
+        void onFailure();
     }
 
-    void logInUser(String email, String password);
+    void logInUser(String email, String password, OnLogInCallback callback);
 }

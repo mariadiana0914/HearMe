@@ -17,9 +17,8 @@ public class RemoteUserDataSource implements UserDataSource {
     private RemoteUserDataSource() {
     }
 
-
     @Override
-    public void logInUser(String email, String password) {
+    public void logInUser(String email, String password, OnLogInCallback callback) {
 
     }
 }

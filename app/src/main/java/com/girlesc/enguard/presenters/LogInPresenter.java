@@ -1,6 +1,7 @@
 package com.girlesc.enguard.presenters;
 
 import com.girlesc.enguard.contracts.LogInContract;
+import com.girlesc.enguard.data.source.UserDataSource;
 import com.girlesc.enguard.data.source.UserRepository;
 
 import static com.google.android.gms.common.internal.Preconditions.checkNotNull;
@@ -25,13 +26,33 @@ public class LogInPresenter implements LogInContract.Presenter {
     @Override
     public void logIn(String email, String password) {
 
+        if(!checkEmail(email)) {
+            mLogInView.showInvalidEmail();
+            return;
+        }
+        if(!checkPassword(password)) {
+            mLogInView.showInvalidPassword();
+            return;
+        }
+        mLogInView.setLoadingIndicator(true);
+        mUserRepository.logInUser(email, password, new UserDataSource.OnLogInCallback() {
+            @Override
+            public void onSuccess() {
+                mLogInView.onLogInSuccess();
+            }
+
+            @Override
+            public void onFailure() {
+                mLogInView.onLogInFailure("Authentication failed");
+            }
+        });
     }
 
     private boolean checkEmail(String email) {
-        return false;
+        return true;
     }
 
     private boolean checkPassword(String password) {
-        return false;
+        return true;
     }
 }

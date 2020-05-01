@@ -72,4 +72,8 @@ public class CustomEditText extends LinearLayout {
         mFieldET.setInputType(mInputType);
         mFieldET.setTypeface(mTypeface);
     }
+
+    public String getText() {
+        return mFieldET.getText().toString();
+    }
 }

@@ -15,7 +15,7 @@ public interface LogInContract {
 
         void onLogInFailure(String message);
 
-        void onLogInSuccess(String message);
+        void onLogInSuccess();
 
     }
 
