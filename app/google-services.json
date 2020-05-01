@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "204356843743",
+    "firebase_url": "https://enguard-app.firebaseio.com",
+    "project_id": "enguard-app",
+    "storage_bucket": "enguard-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204356843743:android:2ca0488647a883034a116a",
+        "android_client_info": {
+          "package_name": "com.girlesc.enguard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "204356843743-pf3gdoolmbt7f1q16u204vmku5teck77.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.girlesc.enguard",
+            "certificate_hash": "37e734f6b684bf5b5d3fa19d3273d2f4eb2cf200"
+          }
+        },
+        {
+          "client_id": "204356843743-ukk8emla75tfcijosrk5s38mi59nrd6n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsLSO_hkAkSc66XsUS2wVnDDdrNqj86GE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "204356843743-ukk8emla75tfcijosrk5s38mi59nrd6n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

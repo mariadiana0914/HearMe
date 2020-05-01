@@ -23,8 +23,23 @@
         android:textColor="@color/colorPrimaryDark"
         android:textSize="28sp" />
 
-    <com.girlesc.hearme.views.CustomSeekBar
+    <com.lukelorusso.verticalseekbar.VerticalSeekBar
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        app:vsb_max_placeholder_position="inside"
+        app:vsb_min_placeholder_position="inside"
+        app:vsb_progress="1"
+        app:vsb_max_value="2"
+        app:vsb_bar_background="@color/colorPrimary"
+        app:vsb_bar_corner_radius="20dp"
+        app:vsb_bar_progress="@color/colorPrimary"
+        app:vsb_bar_width="40dp"
+        app:vsb_click_to_set_progress="false"
+        app:vsb_show_thumb="true"
+        app:vsb_thumb_placeholder_src="@drawable/thumb_security_level_settings"
+        app:vsb_thumb_container_corner_radius="20dp"
+        app:vsb_use_thumb_to_set_progress="true"
+        app:vsb_thumb_container_tint="@android:color/white"
+        />
 
 </LinearLayout>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.girlesc.hearme">
+    package="com.girlesc.enguard">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -22,21 +22,21 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".activities.MapActivity"
-            android:label="@string/title_activity_map">
+            android:name="com.girlesc.enguard.activities.MapActivity">
+        </activity>
+        <activity android:name="com.girlesc.enguard.activities.VoiceRecordingActivity" />
+        <activity android:name="com.girlesc.enguard.activities.AccountSetUpActivity" />
+        <activity android:name="com.girlesc.enguard.activities.TutorialActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.VoiceRecordingActivity" />
-        <activity android:name=".activities.AccountSetUpActivity" />
-        <activity android:name=".activities.TutorialActivity" />
-        <activity android:name=".activities.SignUpActivity" />
-        <activity android:name=".activities.LogInActivity" />
-        <activity android:name=".activities.WelcomeActivity" />
-        <activity android:name=".activities.MainActivity" />
+        <activity android:name="com.girlesc.enguard.activities.SignUpActivity" />
+        <activity android:name="com.girlesc.enguard.activities.LogInActivity" />
+        <activity android:name="com.girlesc.enguard.activities.WelcomeActivity" />
+        <activity android:name="com.girlesc.enguard.activities.MainActivity" />
     </application>
 
 </manifest>

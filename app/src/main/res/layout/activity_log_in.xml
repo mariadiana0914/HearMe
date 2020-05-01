@@ -95,7 +95,7 @@
 
         </LinearLayout>
 
-        <com.girlesc.hearme.views.CustomEditText
+        <com.girlesc.enguard.views.CustomEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
@@ -104,7 +104,7 @@
             android:orientation="vertical"
             app:title="@string/tv_email" />
 
-        <com.girlesc.hearme.views.CustomEditText
+        <com.girlesc.enguard.views.CustomEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
