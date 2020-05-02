@@ -20,4 +20,9 @@ public class UserRemoteDataSource implements UserDataSource {
     public void logInUser(String email, String password, OnLogInCallback callback) {
 
     }
+
+    @Override
+    public void signUpUser(String email, String password, OnSignUpCallback callback) {
+
+    }
 }

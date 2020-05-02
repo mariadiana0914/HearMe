@@ -9,5 +9,11 @@ public interface UserDataSource {
         void onFailure();
     }
 
+    interface OnSignUpCallback {
+        void onSuccess();
+
+        void onFailure();
+    }
     void logInUser(String email, String password, OnLogInCallback callback);
+    void signUpUser(String email, String password, OnSignUpCallback callback);
 }

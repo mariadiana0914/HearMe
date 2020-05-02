@@ -59,4 +59,22 @@ public class UserRepository implements UserDataSource {
                     }
                 });
     }
+    @Override
+    public void signUpUser(String email, String password, final OnSignUpCallback callback){
+        FirebaseAuth.getInstance()
+                .createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful())
+                        {
+                            callback.onSuccess();
+                        } else {
+                            Log.w(TAG, "createUserWithEmailAndPassword:failure", task.getException());
+                            callback.onFailure();
+                        }
+                    }
+                });
+
+    }
 }
