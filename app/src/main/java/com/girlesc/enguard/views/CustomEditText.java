@@ -16,6 +16,11 @@ import com.girlesc.enguard.R;
 
 public class CustomEditText extends LinearLayout {
 
+
+    //TODO: Refractor the class and add more specific functionalities
+    //TODO: 1. Input error message
+    //TODO: 2. Title animation (translate and shrink from current position)
+
     Context mContext;
     TextView mTitleTV;
     EditText mFieldET;

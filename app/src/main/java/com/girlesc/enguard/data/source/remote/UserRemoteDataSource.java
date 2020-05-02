@@ -1,20 +1,19 @@
 package com.girlesc.enguard.data.source.remote;
 
-import com.girlesc.enguard.data.User;
 import com.girlesc.enguard.data.source.UserDataSource;
 
-public class RemoteUserDataSource implements UserDataSource {
+public class UserRemoteDataSource implements UserDataSource {
 
-    private static RemoteUserDataSource INSTANCE;
+    private static UserRemoteDataSource INSTANCE;
 
-    public static RemoteUserDataSource getInstance() {
+    public static UserRemoteDataSource getInstance() {
         if (INSTANCE == null) {
-            INSTANCE = new RemoteUserDataSource();
+            INSTANCE = new UserRemoteDataSource();
         }
         return INSTANCE;
     }
 
-    private RemoteUserDataSource() {
+    private UserRemoteDataSource() {
     }
 
     @Override

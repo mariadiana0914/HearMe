@@ -25,10 +25,12 @@ public class UserRepository implements UserDataSource {
 
 //    private UserRepository(UserDataSource mRemoteUserDataSource, UserDataSource mLocalUserDataSource) {
 //        this.mRemoteUserDataSource = checkNotNull(mRemoteUserDataSource);
-//        this.mLocalUserDataSource = mLocalUserDataSource;
+//        this.mLocalUserDataSource = checkNotNull(mLocalUserDataSource);
 //    }
 
-    private UserRepository(){}
+
+    private UserRepository() {
+    }
 
     public static UserRepository getInstance() {
         if (INSTANCE == null) {

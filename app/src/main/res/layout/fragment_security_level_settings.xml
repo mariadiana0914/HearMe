@@ -23,7 +23,8 @@
         android:textColor="@color/colorPrimaryDark"
         android:textSize="28sp" />
 
-    <com.lukelorusso.verticalseekbar.VerticalSeekBar
+
+    <!--<com.lukelorusso.verticalseekbar.VerticalSeekBar
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:vsb_max_placeholder_position="inside"
@@ -40,6 +41,6 @@
         app:vsb_thumb_container_corner_radius="20dp"
         app:vsb_use_thumb_to_set_progress="true"
         app:vsb_thumb_container_tint="@android:color/white"
-        />
+        />-->
 
 </LinearLayout>

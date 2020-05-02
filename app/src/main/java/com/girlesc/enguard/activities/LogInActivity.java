@@ -29,8 +29,6 @@ public class LogInActivity extends AppCompatActivity implements LogInContract.Vi
     private CustomEditText passwordEditText;
     private Button logInBtn;
 
-
-    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
