@@ -27,8 +27,6 @@ public class AccountDetailsSetUpFragment extends Fragment {
         View view;
         view = inflater.inflate(R.layout.fragment_account_detail_set_up, container, false);
 
-        prefixBtn = view.findViewById(R.id.phonePrefixBtn);
-        prefixTV = view.findViewById(R.id.phonePrefixTV);
 
         phonePrefixMenu = new PopupMenu(getContext(), prefixBtn);
         phonePrefixMenu.inflate(R.menu.menu_phone_number_prefixes);
@@ -40,12 +38,6 @@ public class AccountDetailsSetUpFragment extends Fragment {
             }
         });
 
-        prefixBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                phonePrefixMenu.show();
-            }
-        });
         return view;
     }
 }
