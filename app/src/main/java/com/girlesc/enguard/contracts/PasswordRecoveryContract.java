@@ -3,25 +3,18 @@ package com.girlesc.enguard.contracts;
 import com.girlesc.enguard.BasePresenter;
 import com.girlesc.enguard.BaseView;
 
-public interface LogInContract {
-
+public interface PasswordRecoveryContract {
     interface View extends BaseView<Presenter> {
-
         void setLoadingIndicator(boolean active);
 
         void showInvalidEmail(String message);
 
-        void showInvalidPassword(String message);
+        void onResetPasswordSuccess();
 
-        void onLogInFailure(String message);
-
-        void onLogInSuccess();
-
+        void onResetPasswordFailure(String message);
     }
 
     interface Presenter extends BasePresenter {
-
-        void logIn(String email, String password);
-
+        void sendResetPasswordEmail(String email);
     }
 }

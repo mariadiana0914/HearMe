@@ -20,25 +20,30 @@ import static com.google.android.gms.common.internal.Preconditions.checkNotNull;
 
 public class SignUpActivity extends AppCompatActivity implements SignUpContract.View {
 
-    private LinearLayout backFromSignUpBtn;
-    private Button signUpToSetUpBtn;
-    private TextView logInFromSignUpBtn;
-    private SignUpContract.Presenter mPresenter;
+    private LinearLayout mBackBtn;
+    private Button mSignUpBtn;
+    private TextView mLogInRedirectBtn;
     private CustomEditText mEmailET;
     private CustomEditText mPasswordET;
     private CustomEditText mConfirmPasswordET;
+
+    private SignUpContract.Presenter mPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         setPresenter(new SignUpPresenter(this, UserRepository.getInstance()));
+
         mEmailET = findViewById(R.id.emailET);
         mPasswordET = findViewById(R.id.passwordET);
         mConfirmPasswordET = findViewById(R.id.confirmPasswordET);
 
-        backFromSignUpBtn = findViewById(R.id.backFromSignUpBtn);
-        backFromSignUpBtn.setOnClickListener(new View.OnClickListener() {
+        mBackBtn = findViewById(R.id.backBtn);
+        mSignUpBtn = findViewById(R.id.signUpBtn);
+        mLogInRedirectBtn = findViewById(R.id.logInRedirectBtn);
+
+        mBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SignUpActivity.this, WelcomeActivity.class);
@@ -47,8 +52,7 @@ public class SignUpActivity extends AppCompatActivity implements SignUpContract.
             }
         });
 
-        signUpToSetUpBtn = findViewById(R.id.signUpToSetUpBtn);
-        signUpToSetUpBtn.setOnClickListener(new View.OnClickListener() {
+        mSignUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //mPresenter.signUp(mEmailET.getText(), mPasswordET.getText(), mConfirmPasswordET.getText());
@@ -57,8 +61,8 @@ public class SignUpActivity extends AppCompatActivity implements SignUpContract.
             }
         });
 
-        logInFromSignUpBtn = findViewById(R.id.logInFromSignUpBtn);
-        logInFromSignUpBtn.setOnClickListener(new View.OnClickListener() {
+
+        mLogInRedirectBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SignUpActivity.this, LogInActivity.class);
