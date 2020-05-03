@@ -1,8 +1,14 @@
 package com.girlesc.enguard.presenters;
 
+import android.util.Patterns;
+
 import com.girlesc.enguard.contracts.LogInContract;
 import com.girlesc.enguard.data.source.UserDataSource;
 import com.girlesc.enguard.data.source.UserRepository;
+import com.girlesc.enguard.utils.CredentialsUtils;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static com.google.android.gms.common.internal.Preconditions.checkNotNull;
 
@@ -26,11 +32,11 @@ public class LogInPresenter implements LogInContract.Presenter {
     @Override
     public void logIn(String email, String password) {
 
-        if(!checkEmail(email)) {
+        if (!CredentialsUtils.checkEmail(email)) {
             mLogInView.showInvalidEmail();
             return;
         }
-        if(!checkPassword(password)) {
+        if (!CredentialsUtils.checkPassword(password)) {
             mLogInView.showInvalidPassword();
             return;
         }
@@ -46,13 +52,6 @@ public class LogInPresenter implements LogInContract.Presenter {
                 mLogInView.onLogInFailure("Authentication failed");
             }
         });
-    }
-
-    private boolean checkEmail(String email) {
-        return true;
-    }
-
-    private boolean checkPassword(String password) {
-        return true;
+        mLogInView.setLoadingIndicator(false);
     }
 }

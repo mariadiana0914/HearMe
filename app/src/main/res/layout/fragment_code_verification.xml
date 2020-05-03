@@ -137,7 +137,7 @@
             android:includeFontPadding="false"
             android:text="didn't recieve a code"
             android:textAllCaps="true"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorAccent"
             android:textSize="12sp" />
 
     </LinearLayout>

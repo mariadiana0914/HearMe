@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge>
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
@@ -27,6 +26,7 @@
                 android:id="@+id/fieldET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:layout_marginLeft="0dp"
                 android:layout_marginRight="0dp"
                 android:backgroundTint="@color/colorSecondary"
@@ -45,19 +45,39 @@
                 android:id="@+id/showBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
                 android:background="@android:color/transparent"
                 android:fontFamily="@font/segoeuib"
                 android:includeFontPadding="false"
-                android:text=""
+                android:text="SHOW"
                 android:textAllCaps="true"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorAccent"
                 android:textSize="12sp"
-                android:visibility="gone"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/errorIV"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/errorIV"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_error"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/errorTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="@font/segoeui"
+            android:textColor="@color/colorError"
+            />
 
     </LinearLayout>
 

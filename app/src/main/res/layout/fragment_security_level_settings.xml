@@ -43,8 +43,8 @@
     <com.lukelorusso.verticalseekbar.VerticalSeekBar
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:vsb_bar_background="@color/colorPrimary"
-        app:vsb_bar_progress="@color/colorPrimary"
+        app:vsb_bar_background="@color/colorAccent"
+        app:vsb_bar_progress="@color/colorAccent"
         app:vsb_bar_width="40dp"
         app:vsb_click_to_set_progress="false"
         app:vsb_max_placeholder_position="middle"
