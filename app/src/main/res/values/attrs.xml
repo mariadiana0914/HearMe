@@ -4,6 +4,7 @@
         <attr name="title" format="string" />
         <attr name="android:hint" />
         <attr name="android:inputType" />
+        <attr name="passwordToggleEnabled" format="boolean" />
     </declare-styleable>
     <declare-styleable name="CustomTabLayout">
         <attr name="indicator_width" format="dimension" />

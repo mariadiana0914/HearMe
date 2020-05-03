@@ -150,7 +150,7 @@ public class CustomSeekBar extends View {
             y = valBasedY();
         }
         Paint box = new Paint();
-        box.setColor(getResources().getColor(R.color.colorPrimary));
+        box.setColor(getResources().getColor(R.color.colorAccent));
         canvas.drawRoundRect(new RectF(0, y, width(), y + biggestHeight), 5, 5, box);
     }
 

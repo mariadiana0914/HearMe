@@ -5,12 +5,12 @@ import com.girlesc.enguard.BaseView;
 
 public interface SignUpContract {
 
-    interface View extends BaseView<Presenter>{
-        void showInvalidEmail();
+    interface View extends BaseView<Presenter> {
+        void showInvalidEmail(String message);
 
-        void showInvalidPassword();
+        void showInvalidPassword(String message);
 
-        void showPasswordsNotMatching();
+        void showPasswordsNotMatching(String message);
 
         void onSignUpFailure(String message);
 
@@ -19,13 +19,10 @@ public interface SignUpContract {
         void setLoadingIndicator(boolean active);
 
     }
-    interface Presenter extends BasePresenter{
+
+    interface Presenter extends BasePresenter {
+
         void signUp(String email, String password, String confirmPassword);
-
-        boolean checkEmail(String email);
-
-        boolean checkPassword(String password);
-
-        boolean checkMatchingPasswords(String password, String confirmPassword);
+      
     }
 }

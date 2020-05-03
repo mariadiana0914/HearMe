@@ -84,13 +84,13 @@ public class LogInActivity extends AppCompatActivity implements LogInContract.Vi
     }
 
     @Override
-    public void showInvalidEmail() {
-
+    public void showInvalidEmail(String message) {
+        emailEditText.showErrorMessage(message);
     }
 
     @Override
-    public void showInvalidPassword() {
-
+    public void showInvalidPassword(String message) {
+        passwordEditText.showErrorMessage(message);
     }
 
     @Override

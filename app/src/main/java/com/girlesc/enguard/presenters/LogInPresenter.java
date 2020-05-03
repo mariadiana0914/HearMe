@@ -1,10 +1,17 @@
 package com.girlesc.enguard.presenters;
 
+import android.util.Patterns;
 import androidx.annotation.NonNull;
 
 import com.girlesc.enguard.contracts.LogInContract;
 import com.girlesc.enguard.data.source.UserDataSource;
 import com.girlesc.enguard.data.source.UserRepository;
+
+import com.girlesc.enguard.utils.CredentialsUtils;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -31,12 +38,12 @@ public class LogInPresenter implements LogInContract.Presenter {
     @Override
     public void logIn(String email, String password) {
 
-        if(!checkEmail(email)) {
-            mLogInView.showInvalidEmail();
+        if (!CredentialsUtils.checkEmail(email)) {
+            mLogInView.showInvalidEmail("Invalid email address.");
             return;
         }
-        if(!checkPassword(password)) {
-            mLogInView.showInvalidPassword();
+        if (!CredentialsUtils.checkPassword(password)) {
+            mLogInView.showInvalidPassword("Invalid password type.");
             return;
         }
         mLogInView.setLoadingIndicator(true);
@@ -51,6 +58,7 @@ public class LogInPresenter implements LogInContract.Presenter {
                 mLogInView.onLogInFailure("Authentication failed");
             }
         });
+        mLogInView.setLoadingIndicator(false);
     }
 
     @Override
@@ -65,14 +73,5 @@ public class LogInPresenter implements LogInContract.Presenter {
 
                     }
                 });
-    }
-
-
-    private boolean checkEmail(String email) {
-        return true;
-    }
-
-    private boolean checkPassword(String password) {
-        return true;
     }
 }

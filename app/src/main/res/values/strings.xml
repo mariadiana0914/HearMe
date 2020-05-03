@@ -26,9 +26,9 @@
     <string name="btn_skip">Skip</string>
 
     <!--TextView Texts-->
-    <string name="tv_email">Email</string>
-    <string name="tv_password">Password</string>
-    <string name="tv_confirm_password">Confirm Password</string>
+    <string name="tv_email">EMAIL</string>
+    <string name="tv_password">PASSWORD</string>
+    <string name="tv_confirm_password">CONFIRM PASSWORD</string>
     <string name="tv_forgot_password">Forgot password</string>
     <string name="tv_first_name">First Name</string>
     <string name="tv_last_name">Last Name</string>

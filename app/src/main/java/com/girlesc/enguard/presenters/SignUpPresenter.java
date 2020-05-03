@@ -3,6 +3,7 @@ package com.girlesc.enguard.presenters;
 import com.girlesc.enguard.contracts.SignUpContract;
 import com.girlesc.enguard.data.source.UserDataSource;
 import com.girlesc.enguard.data.source.UserRepository;
+import com.girlesc.enguard.utils.CredentialsUtils;
 
 public class SignUpPresenter implements SignUpContract.Presenter {
 
@@ -16,20 +17,24 @@ public class SignUpPresenter implements SignUpContract.Presenter {
     }
 
     @Override
-    public void signUp(String email, String password, String confirmPassword) {
-        if (!checkEmail(email)) {
-            mSignUpView.showInvalidEmail();
-            return;
-        }
-        if(!checkPassword(password)){
-            mSignUpView.showInvalidPassword();
-            return;
-        }
-        if (!checkMatchingPasswords(password, confirmPassword)){
-            mSignUpView.showPasswordsNotMatching();
-            return;
-        }
+    public void start() {
 
+    }
+
+    @Override
+    public void signUp(String email, String password, String confirmPassword) {
+        if (!CredentialsUtils.checkEmail(email)) {
+            mSignUpView.showInvalidEmail("Invalid email address.");
+            return;
+        }
+        if (!CredentialsUtils.checkPassword(password)) {
+            mSignUpView.showInvalidPassword("Invalid password type.");
+            return;
+        }
+        if (!CredentialsUtils.checkMatchingPasswords(password, confirmPassword)) {
+            mSignUpView.showPasswordsNotMatching("Passwords don't match");
+            return;
+        }
         mSignUpView.setLoadingIndicator(true);
         mUserRepository.signUpUser(email, password, new UserDataSource.OnSignUpCallback() {
             @Override
@@ -40,28 +45,7 @@ public class SignUpPresenter implements SignUpContract.Presenter {
             @Override
             public void onFailure() {
                 mSignUpView.onSignUpFailure("Something went wrong! Please try again.");
-
             }
         });
-    }
-
-    @Override
-    public boolean checkEmail(String email) {
-        return true;
-    }
-
-    @Override
-    public boolean checkPassword(String password) {
-        return true;
-    }
-
-    @Override
-    public boolean checkMatchingPasswords(String password, String confirmPassword) {
-        return true;
-    }
-
-    @Override
-    public void start() {
-
     }
 }
