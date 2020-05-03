@@ -1,6 +1,7 @@
 package com.girlesc.enguard.presenters;
 
 import android.util.Patterns;
+
 import androidx.annotation.NonNull;
 
 import com.girlesc.enguard.contracts.LogInContract;
@@ -55,23 +56,9 @@ public class LogInPresenter implements LogInContract.Presenter {
 
             @Override
             public void onFailure() {
-                mLogInView.onLogInFailure("Authentication failed");
+                mLogInView.onLogInFailure("Authentication failed. Please try again.");
             }
         });
         mLogInView.setLoadingIndicator(false);
-    }
-
-    @Override
-    public void forgotYourPassword() {
-        FirebaseAuth auth = FirebaseAuth.getInstance();
-        String emailAddress = "user@example.com";
-
-        auth.sendPasswordResetEmail(emailAddress)
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-
-                    }
-                });
     }
 }

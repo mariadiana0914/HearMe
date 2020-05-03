@@ -77,4 +77,21 @@ public class UserRepository implements UserDataSource {
                 });
 
     }
+
+    @Override
+    public void sendPasswordRecoveryEmail(String email, final OnPasswordRecoveryEmailCallback callback) {
+        FirebaseAuth.getInstance().sendPasswordResetEmail(email)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if(task.isSuccessful()) {
+                            callback.onSuccess();
+                        }
+                        else {
+                            Log.w(TAG, "sendPasswordResetEmail:failure", task.getException());
+                            callback.onFailure();
+                        }
+                    }
+                });
+    }
 }

@@ -14,6 +14,16 @@ public interface UserDataSource {
 
         void onFailure();
     }
+
+    interface OnPasswordRecoveryEmailCallback {
+        void onSuccess();
+
+        void onFailure();
+    }
+
     void logInUser(String email, String password, OnLogInCallback callback);
+
     void signUpUser(String email, String password, OnSignUpCallback callback);
+
+    void sendPasswordRecoveryEmail(String email, OnPasswordRecoveryEmailCallback callback);
 }

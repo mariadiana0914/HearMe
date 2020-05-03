@@ -16,27 +16,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activities.PasswordRecoveryActivity"></activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity
-            android:name="com.girlesc.enguard.activities.MapActivity">
-        </activity>
-        <activity android:name="com.girlesc.enguard.activities.VoiceRecordingActivity" />
-        <activity android:name="com.girlesc.enguard.activities.AccountSetUpActivity" />
-        <activity android:name="com.girlesc.enguard.activities.TutorialActivity" >
+        <activity android:name=".activities.MapActivity"></activity>
+        <activity android:name=".activities.VoiceRecordingActivity" />
+        <activity android:name=".activities.AccountSetUpActivity" />
+        <activity android:name=".activities.TutorialActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.girlesc.enguard.activities.SignUpActivity" />
-        <activity android:name="com.girlesc.enguard.activities.LogInActivity" />
-        <activity android:name="com.girlesc.enguard.activities.WelcomeActivity" />
-        <activity android:name="com.girlesc.enguard.activities.MainActivity" />
+        <activity android:name=".activities.SignUpActivity" />
+        <activity android:name=".activities.LogInActivity" />
+        <activity android:name=".activities.WelcomeActivity" />
+        <activity android:name=".activities.MainActivity" />
     </application>
 
 </manifest>

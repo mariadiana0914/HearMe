@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 
 import com.girlesc.enguard.R;
 import com.girlesc.enguard.contracts.LogInContract;
+import com.girlesc.enguard.contracts.PasswordRecoveryContract;
 import com.girlesc.enguard.data.source.UserRepository;
 import com.girlesc.enguard.presenters.LogInPresenter;
 import com.girlesc.enguard.utils.ToastUtils;
@@ -23,12 +25,12 @@ public class LogInActivity extends AppCompatActivity implements LogInContract.Vi
 
     private LogInContract.Presenter mPresenter;
 
-    private LinearLayout backFromLogInBtn;
-    private TextView signUpFromLogInBtn;
-    private CustomEditText emailEditText;
-    private CustomEditText passwordEditText;
-    private Button logInBtn;
-    private LinearLayout forgotYourPasswordBtn;
+    private LinearLayout mBackBtn;
+    private TextView mSignUpRedirectBtn;
+    private CustomEditText mEmailET;
+    private CustomEditText mPasswordET;
+    private Button mLogInBtn;
+    private LinearLayout mPasswordRecoveryBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,21 +39,21 @@ public class LogInActivity extends AppCompatActivity implements LogInContract.Vi
 
         setPresenter(new LogInPresenter(UserRepository.getInstance(), this));
 
-        backFromLogInBtn = findViewById(R.id.backFromLogInBtn);
-        signUpFromLogInBtn = findViewById(R.id.signUpFromLogInBtn);
-        logInBtn = findViewById(R.id.logInBtn);
-        emailEditText = findViewById(R.id.emailET);
-        passwordEditText = findViewById(R.id.passwordET);
-        forgotYourPasswordBtn = findViewById(R.id.forgotPasswordBtn);
+        mBackBtn = findViewById(R.id.backBtn);
+        mSignUpRedirectBtn = findViewById(R.id.signUpRedirectBtn);
+        mLogInBtn = findViewById(R.id.logInBtn);
+        mEmailET = findViewById(R.id.emailET);
+        mPasswordET = findViewById(R.id.passwordET);
+        mPasswordRecoveryBtn = findViewById(R.id.forgotPasswordBtn);
 
-        logInBtn.setOnClickListener(new View.OnClickListener() {
+        mLogInBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mPresenter.logIn(emailEditText.getText(), passwordEditText.getText());
+                mPresenter.logIn(mEmailET.getText(), mPasswordET.getText());
             }
         });
 
-        backFromLogInBtn.setOnClickListener(new View.OnClickListener() {
+        mBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LogInActivity.this, WelcomeActivity.class);
@@ -60,7 +62,7 @@ public class LogInActivity extends AppCompatActivity implements LogInContract.Vi
             }
         });
 
-        signUpFromLogInBtn.setOnClickListener(new View.OnClickListener() {
+        mSignUpRedirectBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LogInActivity.this, SignUpActivity.class);
@@ -69,10 +71,11 @@ public class LogInActivity extends AppCompatActivity implements LogInContract.Vi
             }
         });
 
-        forgotYourPasswordBtn.setOnClickListener(new View.OnClickListener(){
+        mPasswordRecoveryBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                mPresenter.forgotYourPassword();
+            public void onClick(View v) {
+                Intent intent = new Intent(LogInActivity.this, PasswordRecoveryActivity.class);
+                startActivity(intent);
             }
 
         });
@@ -85,12 +88,12 @@ public class LogInActivity extends AppCompatActivity implements LogInContract.Vi
 
     @Override
     public void showInvalidEmail(String message) {
-        emailEditText.showErrorMessage(message);
+        mEmailET.showErrorMessage(message);
     }
 
     @Override
     public void showInvalidPassword(String message) {
-        passwordEditText.showErrorMessage(message);
+        mPasswordET.showErrorMessage(message);
     }
 
     @Override

@@ -25,4 +25,9 @@ public class UserRemoteDataSource implements UserDataSource {
     public void signUpUser(String email, String password, OnSignUpCallback callback) {
 
     }
+
+    @Override
+    public void sendPasswordRecoveryEmail(String email, OnPasswordRecoveryEmailCallback callback) {
+
+    }
 }
