@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HearMe</string>
+    <string name="app_name">EnGuard</string>
 
     <!--Welcome Activity Strings-->
     <string name="welcome_activity_primary_greeting_text">Hello!</string>

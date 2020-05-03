@@ -13,7 +13,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/seguisb"
-            android:letterSpacing="0.15"
+            android:letterSpacing="0.125"
             android:text="@string/tv_password"
             android:textAllCaps="true"
             android:textColor="@color/colorSecondary"

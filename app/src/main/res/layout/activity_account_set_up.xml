@@ -20,8 +20,8 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:layout_width="12dp"
-            android:layout_height="12dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
             android:layout_marginTop="1dp"
             android:background="@drawable/ic_arrow"
             android:scaleType="fitCenter" />
@@ -98,8 +98,8 @@
                 android:textSize="16sp" />
 
             <ImageView
-                android:layout_width="12dp"
-                android:layout_height="12dp"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
                 android:layout_marginTop="1dp"
                 android:background="@drawable/ic_arrow"
                 android:rotation="180"

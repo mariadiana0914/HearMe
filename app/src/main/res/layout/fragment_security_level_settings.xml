@@ -24,23 +24,39 @@
         android:textSize="28sp" />
 
 
-    <!--<com.lukelorusso.verticalseekbar.VerticalSeekBar
+    <!--    <com.girlesc.enguard.views.SeekBarRotator
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="3"
+                android:maxHeight="56dp"
+                android:minHeight="56dp"
+                android:progressDrawable="@drawable/seek_bar_vertical_progress_drawable"
+                android:splitTrack="false"
+                android:thumb="@drawable/seek_bar_vertical_thumb"/>
+
+        </com.girlesc.enguard.views.SeekBarRotator>-->
+
+    <com.lukelorusso.verticalseekbar.VerticalSeekBar
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:vsb_max_placeholder_position="inside"
-        app:vsb_min_placeholder_position="inside"
-        app:vsb_progress="1"
-        app:vsb_max_value="2"
         app:vsb_bar_background="@color/colorPrimary"
-        app:vsb_bar_corner_radius="20dp"
         app:vsb_bar_progress="@color/colorPrimary"
         app:vsb_bar_width="40dp"
         app:vsb_click_to_set_progress="false"
+        app:vsb_max_placeholder_position="middle"
+        app:vsb_max_placeholder_src="@drawable/seek_bar_vertical_placeholder_max"
+        app:vsb_max_value="2"
+        app:vsb_min_placeholder_position="middle"
+        app:vsb_min_placeholder_src="@drawable/seek_bar_vertical_placeholder_min"
+        app:vsb_progress="1"
         app:vsb_show_thumb="true"
-        app:vsb_thumb_placeholder_src="@drawable/thumb_security_level_settings"
         app:vsb_thumb_container_corner_radius="20dp"
-        app:vsb_use_thumb_to_set_progress="true"
         app:vsb_thumb_container_tint="@android:color/white"
-        />-->
+        app:vsb_thumb_placeholder_src="@drawable/seek_bar_vertical_thumb"
+        app:vsb_use_thumb_to_set_progress="true" />
 
 </LinearLayout>

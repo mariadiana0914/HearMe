@@ -51,8 +51,9 @@ public class SignUpActivity extends AppCompatActivity implements SignUpContract.
         signUpToSetUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mPresenter.signUp(mEmailET.getText(), mPasswordET.getText(), mConfirmPasswordET.getText());
-
+                //mPresenter.signUp(mEmailET.getText(), mPasswordET.getText(), mConfirmPasswordET.getText());
+                Intent intent = new Intent(SignUpActivity.this, AccountSetUpActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -92,7 +93,6 @@ public class SignUpActivity extends AppCompatActivity implements SignUpContract.
     @Override
     public void onSignUpSuccess() {
         Intent intent = new Intent(this, AccountSetUpActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
         finish();
     }
