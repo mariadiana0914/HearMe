@@ -17,11 +17,12 @@ public interface SignUpContract {
         void onSignUpSuccess();
 
         void setLoadingIndicator(boolean active);
+
     }
 
     interface Presenter extends BasePresenter {
 
         void signUp(String email, String password, String confirmPassword);
-
+      
     }
 }

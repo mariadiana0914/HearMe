@@ -23,5 +23,7 @@ public interface LogInContract {
 
         void logIn(String email, String password);
 
+        void forgotYourPassword();
+
     }
 }
