@@ -28,6 +28,7 @@ public class LogInActivity extends AppCompatActivity implements LogInContract.Vi
     private CustomEditText emailEditText;
     private CustomEditText passwordEditText;
     private Button logInBtn;
+    private LinearLayout forgotYourPasswordBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,7 @@ public class LogInActivity extends AppCompatActivity implements LogInContract.Vi
         logInBtn = findViewById(R.id.logInBtn);
         emailEditText = findViewById(R.id.emailET);
         passwordEditText = findViewById(R.id.passwordET);
+        forgotYourPasswordBtn = findViewById(R.id.forgotPasswordBtn);
 
         logInBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,6 +67,14 @@ public class LogInActivity extends AppCompatActivity implements LogInContract.Vi
                 startActivity(intent);
                 finish();
             }
+        });
+
+        forgotYourPasswordBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                mPresenter.forgotYourPassword();
+            }
+
         });
     }
 

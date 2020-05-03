@@ -22,5 +22,7 @@ public interface LogInContract {
     interface Presenter extends BasePresenter {
 
         void logIn(String email, String password);
+
+        void forgotYourPassword();
     }
 }
