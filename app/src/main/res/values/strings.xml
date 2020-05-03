@@ -1,6 +1,16 @@
 <resources>
     <string name="app_name">EnGuard</string>
 
+    <!--Tutorial Activity Strings-->
+    <string name="tutorial_activity_fragment_1_title">Welcome to EnGuard!</string>
+    <string name="tutorial_activity_fragment_1_description">Create an account by signing up or connecting with Google or Facebook.</string>
+    <string name="tutorial_activity_fragment_2_title">Stay safe!</string>
+    <string name="tutorial_activity_fragment_2_description">Our app provides multiple levels of security, by using Artificial Intelligence. Choose one of them, with the possibility of upgrading it whenever you want.</string>
+    <string name="tutorial_activity_fragment_3_title">Be heard!</string>
+    <string name="tutorial_activity_fragment_3_description">Even if you do not intend to buy a Premium Membership, you can still benefit from our unique features, such as the Voice Recognition Option. In this way, you record a \"safe word\" which will allow you to trigger a distress signal, if you mention it 3 times in a row.</string>
+    <string name="tutorial_activity_fragment_4_title">The last step!</string>
+    <string name="tutorial_activity_fragment_4_description">Explore our interactive Heat Map, search for a safer track and help the community by reporting the abuses.</string>
+
     <!--Welcome Activity Strings-->
     <string name="welcome_activity_primary_greeting_text">Hello!</string>
     <string name="welcome_activity_secondary_greeting_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam.</string>

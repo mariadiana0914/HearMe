@@ -34,9 +34,10 @@ public class TutorialActivity extends AppCompatActivity {
         tabLayout = findViewById(R.id.tabLayout);
 
         pagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        pagerAdapter.addFragment(new TutorialFragment("Lorem ipsum amet consectetuer", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.", R.drawable.ic_launcher_background));
-        pagerAdapter.addFragment(new TutorialFragment("Lorem ipsum amet consectetuer", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.", R.drawable.ic_launcher_background));
-        pagerAdapter.addFragment(new TutorialFragment("Lorem ipsum amet consectetuer", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.", R.drawable.ic_launcher_background));
+        pagerAdapter.addFragment(new TutorialFragment(getResources().getString(R.string.tutorial_activity_fragment_1_title),getResources().getString(R.string.tutorial_activity_fragment_1_description), R.drawable.ic_launcher_background));
+        pagerAdapter.addFragment(new TutorialFragment(getResources().getString(R.string.tutorial_activity_fragment_2_title),getResources().getString(R.string.tutorial_activity_fragment_2_description), R.drawable.ic_launcher_background));
+        pagerAdapter.addFragment(new TutorialFragment(getResources().getString(R.string.tutorial_activity_fragment_3_title),getResources().getString(R.string.tutorial_activity_fragment_3_description), R.drawable.ic_launcher_background));
+        pagerAdapter.addFragment(new TutorialFragment(getResources().getString(R.string.tutorial_activity_fragment_4_title),getResources().getString(R.string.tutorial_activity_fragment_4_description), R.drawable.ic_launcher_background));
 
         viewPager.setAdapter(pagerAdapter);
 
