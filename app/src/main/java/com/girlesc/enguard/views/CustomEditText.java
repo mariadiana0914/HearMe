@@ -1,5 +1,6 @@
 package com.girlesc.enguard.views;
 
+import android.animation.LayoutTransition;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
@@ -86,10 +87,9 @@ public class CustomEditText extends LinearLayout {
         mFieldET.setInputType(mInputType);
         mFieldET.setTypeface(mTypeface);
 
-        if (mPasswordToggle)
-            mShowBtn.setVisibility(View.VISIBLE);
-        else
-            mShowBtn.setVisibility(View.GONE);
+        mErrorTV.setVisibility(View.GONE);
+        mErrorIV.setVisibility(View.GONE);
+        mShowBtn.setVisibility(View.GONE);
 
         mShowBtn.setOnClickListener(new OnClickListener() {
             @Override
@@ -118,6 +118,7 @@ public class CustomEditText extends LinearLayout {
                         mShowBtn.setVisibility(View.GONE);
                     }
                 }
+                hideErrorMessage();
             }
 
             @Override

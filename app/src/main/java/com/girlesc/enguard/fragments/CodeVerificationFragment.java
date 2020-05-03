@@ -14,6 +14,9 @@ import com.girlesc.enguard.R;
 public class CodeVerificationFragment extends Fragment {
     @Nullable
     @Override
+
+
+
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view;
         view = inflater.inflate(R.layout.fragment_code_verification, container, false);

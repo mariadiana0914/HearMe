@@ -24,15 +24,15 @@ public class SignUpPresenter implements SignUpContract.Presenter {
     @Override
     public void signUp(String email, String password, String confirmPassword) {
         if (!CredentialsUtils.checkEmail(email)) {
-            mSignUpView.showInvalidEmail();
+            mSignUpView.showInvalidEmail("Invalid email address.");
             return;
         }
         if (!CredentialsUtils.checkPassword(password)) {
-            mSignUpView.showInvalidPassword();
+            mSignUpView.showInvalidPassword("Invalid password type.");
             return;
         }
         if (!CredentialsUtils.checkMatchingPasswords(password, confirmPassword)) {
-            mSignUpView.showPasswordsNotMatching();
+            mSignUpView.showPasswordsNotMatching("Passwords don't match");
             return;
         }
         mSignUpView.setLoadingIndicator(true);

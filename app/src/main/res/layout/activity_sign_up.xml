@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
     android:padding="32dp"
     tools:context=".activities.SignUpActivity">
 
@@ -119,6 +120,7 @@
                 android:layout_marginBottom="16dp"
                 android:hint="@string/et_password_hint"
                 android:inputType="textPassword"
+                app:passwordToggleEnabled="true"
                 app:title="@string/tv_password" />
 
             <com.girlesc.enguard.views.CustomEditText
@@ -128,6 +130,7 @@
                 android:layout_marginBottom="16dp"
                 android:hint="@string/et_confirm_password_hint"
                 android:inputType="textPassword"
+                app:passwordToggleEnabled="true"
                 app:title="@string/tv_confirm_password" />
 
         </LinearLayout>

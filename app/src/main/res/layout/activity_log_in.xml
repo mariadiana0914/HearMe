@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
     android:padding="32dp"
     tools:context=".activities.LogInActivity">
 
@@ -96,31 +97,6 @@
 
         </LinearLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="0dp"
-            app:errorEnabled="true"
-            app:errorIconDrawable="@drawable/ic_error"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:passwordToggleEnabled="true"
-            app:passwordToggleDrawable="@drawable/ic_show">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:backgroundTint="@color/colorSecondary"
-                android:fontFamily="@font/segoeui"
-                android:hint="@string/tv_password"
-                android:inputType="textEmailAddress"
-                android:paddingTop="0dp"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="16sp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
         <com.girlesc.enguard.views.CustomEditText
             android:id="@+id/emailET"
             android:layout_width="match_parent"
@@ -139,6 +115,7 @@
             android:hint="@string/et_password_hint"
             android:inputType="textPassword"
             android:orientation="vertical"
+            app:passwordToggleEnabled="true"
             app:title="@string/tv_password" />
 
         <LinearLayout

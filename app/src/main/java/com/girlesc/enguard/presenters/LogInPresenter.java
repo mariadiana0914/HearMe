@@ -33,11 +33,11 @@ public class LogInPresenter implements LogInContract.Presenter {
     public void logIn(String email, String password) {
 
         if (!CredentialsUtils.checkEmail(email)) {
-            mLogInView.showInvalidEmail();
+            mLogInView.showInvalidEmail("Invalid email address.");
             return;
         }
         if (!CredentialsUtils.checkPassword(password)) {
-            mLogInView.showInvalidPassword();
+            mLogInView.showInvalidPassword("Invalid password type.");
             return;
         }
         mLogInView.setLoadingIndicator(true);

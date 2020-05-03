@@ -66,23 +66,21 @@ public class SignUpActivity extends AppCompatActivity implements SignUpContract.
                 finish();
             }
         });
-
-
     }
 
     @Override
-    public void showInvalidEmail() {
-
+    public void showInvalidEmail(String message) {
+        mEmailET.showErrorMessage(message);
     }
 
     @Override
-    public void showInvalidPassword() {
-
+    public void showInvalidPassword(String message) {
+        mPasswordET.showErrorMessage(message);
     }
 
     @Override
-    public void showPasswordsNotMatching() {
-
+    public void showPasswordsNotMatching(String message) {
+        mConfirmPasswordET.showErrorMessage(message);
     }
 
     @Override
@@ -105,6 +103,5 @@ public class SignUpActivity extends AppCompatActivity implements SignUpContract.
     @Override
     public void setPresenter(SignUpContract.Presenter presenter) {
         mPresenter = checkNotNull(presenter);
-
     }
 }

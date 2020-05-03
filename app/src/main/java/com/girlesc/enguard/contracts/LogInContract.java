@@ -9,9 +9,9 @@ public interface LogInContract {
 
         void setLoadingIndicator(boolean active);
 
-        void showInvalidEmail();
+        void showInvalidEmail(String message);
 
-        void showInvalidPassword();
+        void showInvalidPassword(String message);
 
         void onLogInFailure(String message);
 
