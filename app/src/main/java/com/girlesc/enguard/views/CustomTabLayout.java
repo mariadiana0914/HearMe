@@ -21,8 +21,6 @@ import com.girlesc.enguard.R;
 
 public class CustomTabLayout extends LinearLayout {
 
-    //TODO: Refractor the class and add more specific functionalities (e.g. add animation functions and the possibility to receive an animator drawable or object)
-
     private ViewPager viewPager;
 
     private int orientation = -1;

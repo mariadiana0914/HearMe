@@ -81,7 +81,7 @@
             android:text="@string/log_in_activity_secondary_greeting_text"
             android:textColor="@color/colorError"
             android:textSize="14sp"
-            android:visibility="visible" />
+            android:visibility="gone" />
 
     </LinearLayout>
 

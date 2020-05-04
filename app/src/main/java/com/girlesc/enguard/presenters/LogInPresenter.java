@@ -40,11 +40,11 @@ public class LogInPresenter implements LogInContract.Presenter {
     public void logIn(String email, String password) {
 
         if (!CredentialsUtils.checkEmail(email)) {
-            mLogInView.showInvalidEmail("Invalid email address.");
+            mLogInView.showInvalidEmail();
             return;
         }
         if (!CredentialsUtils.checkPassword(password)) {
-            mLogInView.showInvalidPassword("Invalid password type.");
+            mLogInView.showInvalidPassword();
             return;
         }
         mLogInView.setLoadingIndicator(true);
@@ -56,7 +56,7 @@ public class LogInPresenter implements LogInContract.Presenter {
 
             @Override
             public void onFailure() {
-                mLogInView.onLogInFailure("Authentication failed. Please try again.");
+                mLogInView.onLogInFailure();
             }
         });
         mLogInView.setLoadingIndicator(false);

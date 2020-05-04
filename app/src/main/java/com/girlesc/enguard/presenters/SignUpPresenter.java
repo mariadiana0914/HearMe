@@ -24,15 +24,15 @@ public class SignUpPresenter implements SignUpContract.Presenter {
     @Override
     public void signUp(String email, String password, String confirmPassword) {
         if (!CredentialsUtils.checkEmail(email)) {
-            mSignUpView.showInvalidEmail("Invalid email address.");
+            mSignUpView.showInvalidEmail();
             return;
         }
         if (!CredentialsUtils.checkPassword(password)) {
-            mSignUpView.showInvalidPassword("Invalid password type.");
+            mSignUpView.showInvalidPassword();
             return;
         }
         if (!CredentialsUtils.checkMatchingPasswords(password, confirmPassword)) {
-            mSignUpView.showPasswordsNotMatching("Passwords don't match");
+            mSignUpView.showPasswordsNotMatching();
             return;
         }
         mSignUpView.setLoadingIndicator(true);
@@ -44,7 +44,7 @@ public class SignUpPresenter implements SignUpContract.Presenter {
 
             @Override
             public void onFailure() {
-                mSignUpView.onSignUpFailure("Something went wrong! Please try again.");
+                mSignUpView.onSignUpFailure();
             }
         });
     }

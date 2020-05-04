@@ -73,23 +73,23 @@ public class SignUpActivity extends AppCompatActivity implements SignUpContract.
     }
 
     @Override
-    public void showInvalidEmail(String message) {
-        mEmailET.showErrorMessage(message);
+    public void showInvalidEmail() {
+        mEmailET.showErrorMessage(getResources().getString(R.string.tv_invalid_email_address));
     }
 
     @Override
-    public void showInvalidPassword(String message) {
-        mPasswordET.showErrorMessage(message);
+    public void showInvalidPassword() {
+        mPasswordET.showErrorMessage(getResources().getString(R.string.tv_invalid_password));
     }
 
     @Override
-    public void showPasswordsNotMatching(String message) {
-        mConfirmPasswordET.showErrorMessage(message);
+    public void showPasswordsNotMatching() {
+        mConfirmPasswordET.showErrorMessage(getResources().getString(R.string.tv_non_matching_passwords));
     }
 
     @Override
-    public void onSignUpFailure(String message) {
-        ToastUtils.showToast(this, message);
+    public void onSignUpFailure() {
+        ToastUtils.showToast(this, getResources().getString(R.string.tv_sign_up_failure));
     }
 
     @Override

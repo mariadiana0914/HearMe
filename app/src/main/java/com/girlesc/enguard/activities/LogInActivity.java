@@ -87,18 +87,18 @@ public class LogInActivity extends AppCompatActivity implements LogInContract.Vi
     }
 
     @Override
-    public void showInvalidEmail(String message) {
-        mEmailET.showErrorMessage(message);
+    public void showInvalidEmail() {
+        mEmailET.showErrorMessage(getResources().getString(R.string.tv_invalid_email_address));
     }
 
     @Override
-    public void showInvalidPassword(String message) {
-        mPasswordET.showErrorMessage(message);
+    public void showInvalidPassword() {
+        mPasswordET.showErrorMessage(getResources().getString(R.string.tv_invalid_password_type));
     }
 
     @Override
-    public void onLogInFailure(String message) {
-        ToastUtils.showToast(this, message);
+    public void onLogInFailure() {
+        ToastUtils.showToast(this, getResources().getString(R.string.tv_authentication_failed));
     }
 
     @Override

@@ -53,18 +53,19 @@ public class PasswordRecoveryActivity extends AppCompatActivity implements Passw
     }
 
     @Override
-    public void showInvalidEmail(String message) {
-        mEmailET.showErrorMessage(message);
+    public void showInvalidEmail() {
+        mEmailET.showErrorMessage(getResources().getString(R.string.tv_invalid_email_address));
     }
 
     @Override
     public void onResetPasswordSuccess() {
-        ToastUtils.showToast(this, "A password recovery email has been sent to your inbox.");
+        ToastUtils.showToast(this, getResources().getString(R.string.tv_password_recovery_email_sent));
     }
 
     @Override
-    public void onResetPasswordFailure(String message) {
-        ToastUtils.showToast(this, message);
+    public void onResetPasswordFailure() {
+
+        ToastUtils.showToast(this, getResources().getString(R.string.tv_password_recovery_failed));
     }
 
     @Override
