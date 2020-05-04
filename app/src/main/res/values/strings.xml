@@ -101,6 +101,7 @@
     <string name="tv_lorem_ipsum_description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</string>
     <string name="tv_show">SHOW</string>
     <string name="tv_invalid_email_address">Invalid email address!</string>
+    <string name="tv_select_a_contact">Select a contact</string>
 
     <!--EditText Hints-->
     <string name="et_email_hint">something@something.com</string>
@@ -115,6 +116,7 @@
     <!--Other-->
     <string name="quota_exceeded">Quota exceeded.</string>
     <string name="tv_resend_code">Resend code in %d seconds</string>
+
 
 
 </resources>

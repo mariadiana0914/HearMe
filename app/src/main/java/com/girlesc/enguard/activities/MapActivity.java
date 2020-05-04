@@ -24,7 +24,9 @@ import androidx.core.content.ContextCompat;
 
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,9 +44,9 @@ public class MapActivity extends AppCompatActivity
 
     private GoogleMap mMap;
     private Button mSosBtn;
+    private ToggleButton mToggleBtn;
     private HeatmapTileProvider mProvider;
     private TileOverlay mOverlay;
-
 
 
     @Override
@@ -61,6 +63,16 @@ public class MapActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 Toast.makeText(MapActivity.this, getResources().getString(R.string.tv_sos_button_toast), Toast.LENGTH_LONG).show();
+            }
+        });
+        mToggleBtn = findViewById(R.id.toggleBtn);
+        mToggleBtn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    mOverlay.setVisible(true);
+                } else {
+                    mOverlay.setVisible(false);
+                }
             }
         });
     }
