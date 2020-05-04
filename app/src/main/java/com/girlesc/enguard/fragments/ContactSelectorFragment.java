@@ -1,4 +1,4 @@
-package com.girlesc.enguard.fragments;
+/* package com.girlesc.enguard.fragments;
 import android.annotation.SuppressLint;
 import android.database.Cursor;
 import android.net.Uri;
@@ -21,9 +21,7 @@ import androidx.loader.content.Loader;
 import com.girlesc.enguard.R;
 
 
-class ContactsFragment extends Fragment implements
-        LoaderManager.LoaderCallbacks<Cursor>,
-        AdapterView.OnItemClickListener {
+class ContactsFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor>, AdapterView.OnItemClickListener {
 
     private final static int[] TO_IDS = {
             android.R.id.text1
@@ -80,4 +78,4 @@ class ContactsFragment extends Fragment implements
                     container, false);
         }
     }
-}
+} */
