@@ -59,7 +59,7 @@ public class VoiceRecordingActivity<REQUEST_PERMISSION_CODE> extends AppCompatAc
                     btnPlay.setEnabled(false);
                     btnStopPlay.setEnabled(false);
 
-                    Toast.makeText(VoiceRecordingActivity.this, "Recording...", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(VoiceRecordingActivity.this, getResources().getString(R.string.tv_recording), Toast.LENGTH_SHORT).show();
                 }
             });
 
@@ -90,7 +90,7 @@ public class VoiceRecordingActivity<REQUEST_PERMISSION_CODE> extends AppCompatAc
                     }
 
                     mediaPlayer.start();
-                    Toast.makeText(VoiceRecordingActivity.this, "Playing...", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(VoiceRecordingActivity.this, getResources().getString(R.string.tv_playing), Toast.LENGTH_SHORT).show();
                 }
             });
 
@@ -130,9 +130,9 @@ public class VoiceRecordingActivity<REQUEST_PERMISSION_CODE> extends AppCompatAc
         switch (requestCode) {
             case REQUEST_PERMISSION_CODE: {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
-                    Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, getResources().getString(R.string.tv_grant_permission), Toast.LENGTH_SHORT).show();
                 else
-                    Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, getResources().getString(R.string.tv_deny_permission), Toast.LENGTH_SHORT).show();
             }
             break;
         }

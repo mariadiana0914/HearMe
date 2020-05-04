@@ -26,7 +26,7 @@ public class PasswordRecoveryPresenter implements PasswordRecoveryContract.Prese
     @Override
     public void sendResetPasswordEmail(String email) {
         if(!CredentialsUtils.checkEmail(email)) {
-            mPasswordRecoveryView.showInvalidEmail("Invalid email address");
+            mPasswordRecoveryView.showInvalidEmail();
             return;
         }
         mPasswordRecoveryView.setLoadingIndicator(true);
@@ -38,7 +38,7 @@ public class PasswordRecoveryPresenter implements PasswordRecoveryContract.Prese
 
             @Override
             public void onFailure() {
-                mPasswordRecoveryView.onResetPasswordFailure("Password recovery failed. Please try again.");
+                mPasswordRecoveryView.onResetPasswordFailure();
             }
         });
         mPasswordRecoveryView.setLoadingIndicator(false);

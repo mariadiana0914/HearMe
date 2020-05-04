@@ -2,6 +2,7 @@ package com.girlesc.enguard.data.source.local;
 
 import com.girlesc.enguard.data.source.UserDataSource;
 import com.girlesc.enguard.utils.AppExecutors;
+import com.google.firebase.auth.AuthCredential;
 
 public class UserLocalDataSource implements UserDataSource {
 
@@ -36,6 +37,11 @@ public class UserLocalDataSource implements UserDataSource {
 
     @Override
     public void sendPasswordRecoveryEmail(String email, OnPasswordRecoveryEmailCallback callback) {
+
+    }
+
+    @Override
+    public void linkCredentials(AuthCredential credential, BaseCallback callback) {
 
     }
 }

@@ -52,5 +52,5 @@ public class CustomViewPager extends ViewPager {
     }
 
     public void setSwipe(boolean swipe) { mSwipe = swipe; }
-    
+
 }

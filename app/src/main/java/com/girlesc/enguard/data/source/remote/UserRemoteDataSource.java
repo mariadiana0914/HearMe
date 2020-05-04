@@ -1,6 +1,7 @@
 package com.girlesc.enguard.data.source.remote;
 
 import com.girlesc.enguard.data.source.UserDataSource;
+import com.google.firebase.auth.AuthCredential;
 
 public class UserRemoteDataSource implements UserDataSource {
 
@@ -28,6 +29,11 @@ public class UserRemoteDataSource implements UserDataSource {
 
     @Override
     public void sendPasswordRecoveryEmail(String email, OnPasswordRecoveryEmailCallback callback) {
+
+    }
+
+    @Override
+    public void linkCredentials(AuthCredential credential, BaseCallback callback) {
 
     }
 }

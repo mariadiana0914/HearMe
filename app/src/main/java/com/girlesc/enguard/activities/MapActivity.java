@@ -60,7 +60,7 @@ public class MapActivity extends AppCompatActivity
         mSosBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MapActivity.this, "Orice mesaj", Toast.LENGTH_LONG).show();
+                Toast.makeText(MapActivity.this, getResources().getString(R.string.tv_sos_button_toast), Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -76,34 +76,28 @@ public class MapActivity extends AppCompatActivity
     }
 
     private void enableMyLocation() {
-        // [START maps_check_location_permission]
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
             if (mMap != null) {
                 mMap.setMyLocationEnabled(true);
             }
         } else {
-            // Permission to access the location is missing. Show rationale and request permission
             PermissionUtils.requestPermission(this, LOCATION_PERMISSION_REQUEST_CODE,
                     Manifest.permission.ACCESS_FINE_LOCATION, true);
         }
-        // [END maps_check_location_permission]
-    }
+}
 
     @Override
     public boolean onMyLocationButtonClick() {
-        Toast.makeText(this, "MyLocation button clicked", Toast.LENGTH_SHORT).show();
-        // Return false so that we don't consume the event and the default behavior still occurs
-        // (the camera animates to the user's current position).
+        Toast.makeText(this, getResources().getString(R.string.tv_my_location_button_toast), Toast.LENGTH_SHORT).show();
         return false;
     }
 
     @Override
     public void onMyLocationClick(@NonNull Location location) {
-        Toast.makeText(this, "Current location:\n" + location, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, getResources().getString(R.string.tv_current_location) + location, Toast.LENGTH_LONG).show();
     }
 
-    // [START maps_check_location_permission_result]
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if (requestCode != LOCATION_PERMISSION_REQUEST_CODE) {
@@ -111,23 +105,16 @@ public class MapActivity extends AppCompatActivity
         }
 
         if (PermissionUtils.isPermissionGranted(permissions, grantResults, Manifest.permission.ACCESS_FINE_LOCATION)) {
-            // Enable the my location layer if the permission has been granted.
             enableMyLocation();
         } else {
-            // Permission was denied. Display an error message
-            // [START_EXCLUDE]
-            // Display the missing permission error dialog when the fragments resume.
             mPermissionDenied = true;
-            // [END_EXCLUDE]
         }
     }
-    // [END maps_check_location_permission_result]
 
     @Override
     protected void onResumeFragments() {
         super.onResumeFragments();
         if (mPermissionDenied) {
-            // Permission was not granted, display error dialog.
             showMissingPermissionError();
             mPermissionDenied = false;
         }
@@ -151,9 +138,7 @@ public class MapActivity extends AppCompatActivity
         mProvider = new HeatmapTileProvider.Builder()
                 .data(list)
                 .build();
-        // Add a tile overlay to the map, using the heat map tile provider.
         mOverlay = mMap.addTileOverlay(new TileOverlayOptions().tileProvider(mProvider));
     }
-
 
 }

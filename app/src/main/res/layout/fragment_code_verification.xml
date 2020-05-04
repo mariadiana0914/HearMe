@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"
             android:fontFamily="@font/segoeuib"
-            android:text="@string/tv_insert_your_sms_passcode"
+            android:text="@string/tv_insert_your_sms_pass_code"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimaryDark"
@@ -106,7 +106,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/segoeuisl"
-            android:text="@string/tv_invalid_passcode"
+            android:text="@string/tv_invalid_pass_code"
             android:textColor="@color/colorError"
             android:textSize="20sp" />
 
@@ -133,7 +133,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/seguisb"
             android:includeFontPadding="false"
-            android:text="@string/tv_didn_t_recieve_a_code"
+            android:text="@string/tv_code_not_received"
             android:textAllCaps="true"
             android:textColor="@color/colorAccent"
             android:textSize="12sp" />

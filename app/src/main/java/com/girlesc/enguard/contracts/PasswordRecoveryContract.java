@@ -7,11 +7,11 @@ public interface PasswordRecoveryContract {
     interface View extends BaseView<Presenter> {
         void setLoadingIndicator(boolean active);
 
-        void showInvalidEmail(String message);
+        void showInvalidEmail();
 
         void onResetPasswordSuccess();
 
-        void onResetPasswordFailure(String message);
+        void onResetPasswordFailure();
     }
 
     interface Presenter extends BasePresenter {

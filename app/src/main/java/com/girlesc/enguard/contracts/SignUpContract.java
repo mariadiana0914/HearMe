@@ -6,13 +6,13 @@ import com.girlesc.enguard.BaseView;
 public interface SignUpContract {
 
     interface View extends BaseView<Presenter> {
-        void showInvalidEmail(String message);
+        void showInvalidEmail();
 
-        void showInvalidPassword(String message);
+        void showInvalidPassword();
 
-        void showPasswordsNotMatching(String message);
+        void showPasswordsNotMatching();
 
-        void onSignUpFailure(String message);
+        void onSignUpFailure();
 
         void onSignUpSuccess();
 

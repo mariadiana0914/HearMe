@@ -138,7 +138,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/seguisb"
                 android:includeFontPadding="false"
-                android:text="@string/tv_forgot_password"
+                android:text="@string/tv_forgotten_your_password"
                 android:textAllCaps="true"
                 android:textColor="@color/colorAccent"
                 android:textSize="12sp" />
