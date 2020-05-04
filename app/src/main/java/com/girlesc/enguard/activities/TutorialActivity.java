@@ -48,7 +48,7 @@ public class TutorialActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int position = viewPager.getCurrentItem() + 1;
 
-                if (position <= viewPager.getChildCount() - 1) {
+                if (position <= viewPager.getChildCount()) {
                     viewPager.setCurrentItem(position);
                 } else {
                     Intent intent = new Intent(TutorialActivity.this, WelcomeActivity.class);
