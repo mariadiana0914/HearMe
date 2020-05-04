@@ -18,17 +18,12 @@ public class CodeVerificationPresenter implements CodeVerificationContract.Prese
     }
 
     @Override
-    public void sendVerificationCode(String phoneNumber) {
-        mCodeVerificationView.startResendCodeCountdown();
-    }
-
-    @Override
     public void linkPhoneCredentials(PhoneAuthCredential credential) {
         mCodeVerificationView.setLoadingIndicator(true);
         mUserRepository.linkCredentials(credential, new UserDataSource.BaseCallback() {
             @Override
             public void onSuccess() {
-                
+
             }
 
             @Override

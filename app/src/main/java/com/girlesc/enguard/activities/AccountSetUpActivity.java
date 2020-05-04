@@ -17,6 +17,7 @@ import com.girlesc.enguard.fragments.AccountDetailsSetUpFragment;
 import com.girlesc.enguard.fragments.CodeVerificationFragment;
 import com.girlesc.enguard.fragments.SecurityLevelSettingsFragment;
 import com.girlesc.enguard.views.CustomTabLayout;
+import com.girlesc.enguard.views.CustomViewPager;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
@@ -25,10 +26,11 @@ import java.util.concurrent.TimeUnit;
 
 public class AccountSetUpActivity extends AppCompatActivity {
 
-    private ViewPager viewPager;
+    private CustomViewPager viewPager;
     private SectionsPagerAdapter pagerAdapter;
     private LinearLayout nextBtn;
     private CustomTabLayout tabLayout;
+    private LinearLayout backBtn;
 
     private AccountDetailsSetUpFragment mAccountDetailsSetUpFragment;
     private SecurityLevelSettingsFragment mSecurityLevelSettingsFragment;
@@ -42,19 +44,12 @@ public class AccountSetUpActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPager);
         nextBtn = findViewById(R.id.nextBtn);
         tabLayout = findViewById(R.id.tabLayout);
+        backBtn = findViewById(R.id.backBtn);
 
         mAccountDetailsSetUpFragment = new AccountDetailsSetUpFragment();
         mSecurityLevelSettingsFragment = new SecurityLevelSettingsFragment();
         mCodeVerificationFragment = new CodeVerificationFragment();
 
-        viewPager.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                return true;
-            }
-
-
-        });
         pagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         pagerAdapter.addFragment(mAccountDetailsSetUpFragment);
         pagerAdapter.addFragment(mCodeVerificationFragment);
@@ -63,12 +58,22 @@ public class AccountSetUpActivity extends AppCompatActivity {
         viewPager.setAdapter(pagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
 
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int position = viewPager.getCurrentItem() - 1;
+                if(position == 0)
+                    backBtn.setVisibility(View.INVISIBLE);
+                viewPager.setCurrentItem(position);
+            }
+        });
+
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                backBtn.setVisibility(View.VISIBLE);
                 int position = viewPager.getCurrentItem() + 1;
-
-                if (position <= viewPager.getChildCount() - 1) {
+                if (position <= viewPager.getChildCount()) {
                     viewPager.setCurrentItem(position);
                 } else {
                     Intent intent = new Intent(AccountSetUpActivity.this, MainActivity.class);

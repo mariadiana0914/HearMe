@@ -29,7 +29,7 @@ public class CustomViewPager extends ViewPager {
 
         TypedArray styleAttributesArray = context.obtainStyledAttributes(attrs, R.styleable.CustomViewPager);
         try {
-            mSwipe = styleAttributesArray.getBoolean(R.styleable.CustomViewPager_swipe, false);
+            mSwipe = styleAttributesArray.getBoolean(R.styleable.CustomViewPager_swipe, true);
         } finally {
             styleAttributesArray.recycle();
         }

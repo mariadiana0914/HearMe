@@ -32,6 +32,7 @@ public class CodeVerificationFragment extends Fragment implements CodeVerificati
     private LinearLayout mResendCodeBtn;
     private TextView mCountDownTV;
 
+    private String mPhoneNumber;
     private String mVerificationId;
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
     private PhoneAuthProvider.ForceResendingToken mResendToken;
@@ -88,15 +89,13 @@ public class CodeVerificationFragment extends Fragment implements CodeVerificati
     @Override
     public void onStart() {
         super.onStart();
-        if (!mVerificationInProgress) {
-
+        if (mVerificationInProgress) {
+            sendPhoneVerificationCode(mPhoneNumber);
         }
     }
 
     public void sendPhoneVerificationCode(String phoneNumber) {
-
         mResendCodeBtn.setEnabled(false);
-
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
                 phoneNumber,
                 60,
@@ -106,27 +105,11 @@ public class CodeVerificationFragment extends Fragment implements CodeVerificati
         );
 
         mVerificationInProgress = true;
-
-        new CountDownTimer(60000, 1000) {
-
-            @Override
-            public void onTick(long l) {
-                mCountDownTV.setText(getResources().getString(R.string.tv_resend_code, l/1000));
-            }
-
-            @Override
-            public void onFinish() {
-                mVerificationInProgress = false;
-                mResendCodeBtn.setEnabled(true);
-            }
-        };
+        startResendCodeCountdown();
     }
 
-    private void resendVerificationCode(String phoneNumber,
-                                        PhoneAuthProvider.ForceResendingToken token) {
-
+    private void resendVerificationCode(String phoneNumber, PhoneAuthProvider.ForceResendingToken token) {
         mResendCodeBtn.setEnabled(false);
-
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
                 phoneNumber,
                 60,
@@ -135,22 +118,8 @@ public class CodeVerificationFragment extends Fragment implements CodeVerificati
                 mCallbacks,
                 token
         );
-
         mVerificationInProgress = true;
-
-        new CountDownTimer(60000, 1000) {
-
-            @Override
-            public void onTick(long l) {
-                mCountDownTV.setText(getResources().getString(R.string.tv_resend_code, l/1000));
-            }
-
-            @Override
-            public void onFinish() {
-                mVerificationInProgress = false;
-                mResendCodeBtn.setEnabled(true);
-            }
-        };
+        startResendCodeCountdown();
     }
 
     @Override
@@ -160,7 +129,19 @@ public class CodeVerificationFragment extends Fragment implements CodeVerificati
 
     @Override
     public void startResendCodeCountdown() {
+        new CountDownTimer(60000, 1000) {
 
+            @Override
+            public void onTick(long l) {
+                mCountDownTV.setText(getResources().getString(R.string.tv_resend_code, l / 1000));
+            }
+
+            @Override
+            public void onFinish() {
+                mVerificationInProgress = false;
+                mResendCodeBtn.setEnabled(true);
+            }
+        };
     }
 
     @Override
@@ -170,6 +151,6 @@ public class CodeVerificationFragment extends Fragment implements CodeVerificati
 
     @Override
     public void setPresenter(CodeVerificationContract.Presenter presenter) {
-
+        mCodeVerificationPresenter = presenter;
     }
 }

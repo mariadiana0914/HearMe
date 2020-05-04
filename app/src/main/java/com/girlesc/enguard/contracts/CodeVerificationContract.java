@@ -18,8 +18,6 @@ public interface CodeVerificationContract {
 
     interface Presenter extends BasePresenter {
 
-        void sendVerificationCode(String phoneNumber);
-
         void linkPhoneCredentials(PhoneAuthCredential credential);
 
     }
