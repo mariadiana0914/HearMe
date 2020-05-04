@@ -75,6 +75,8 @@
     <string name="location_permission_denied">Please try again and grant access to use the location.</string>
     <string name="permission_required_toast">Location permission is required.</string>
 
-
+    <!--Other-->
+    <string name="quota_exceeded">Quota exceeded.</string>
+    <string name="tv_resend_code">Resend code in %d seconds</string>
 
 </resources>

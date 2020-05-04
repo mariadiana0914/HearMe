@@ -1,11 +1,13 @@
 package com.girlesc.enguard.activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -15,6 +17,11 @@ import com.girlesc.enguard.fragments.AccountDetailsSetUpFragment;
 import com.girlesc.enguard.fragments.CodeVerificationFragment;
 import com.girlesc.enguard.fragments.SecurityLevelSettingsFragment;
 import com.girlesc.enguard.views.CustomTabLayout;
+import com.google.firebase.FirebaseException;
+import com.google.firebase.auth.PhoneAuthCredential;
+import com.google.firebase.auth.PhoneAuthProvider;
+
+import java.util.concurrent.TimeUnit;
 
 public class AccountSetUpActivity extends AppCompatActivity {
 
@@ -22,6 +29,10 @@ public class AccountSetUpActivity extends AppCompatActivity {
     private SectionsPagerAdapter pagerAdapter;
     private LinearLayout nextBtn;
     private CustomTabLayout tabLayout;
+
+    private AccountDetailsSetUpFragment mAccountDetailsSetUpFragment;
+    private SecurityLevelSettingsFragment mSecurityLevelSettingsFragment;
+    private CodeVerificationFragment mCodeVerificationFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +43,22 @@ public class AccountSetUpActivity extends AppCompatActivity {
         nextBtn = findViewById(R.id.nextBtn);
         tabLayout = findViewById(R.id.tabLayout);
 
+        mAccountDetailsSetUpFragment = new AccountDetailsSetUpFragment();
+        mSecurityLevelSettingsFragment = new SecurityLevelSettingsFragment();
+        mCodeVerificationFragment = new CodeVerificationFragment();
+
+        viewPager.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                return true;
+            }
+
+
+        });
         pagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        pagerAdapter.addFragment(new AccountDetailsSetUpFragment());
-        pagerAdapter.addFragment(new SecurityLevelSettingsFragment());
-        pagerAdapter.addFragment(new CodeVerificationFragment());
+        pagerAdapter.addFragment(mAccountDetailsSetUpFragment);
+        pagerAdapter.addFragment(mCodeVerificationFragment);
+        pagerAdapter.addFragment(mSecurityLevelSettingsFragment);
 
         viewPager.setAdapter(pagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
