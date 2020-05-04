@@ -64,8 +64,10 @@
 
     <!--Map Activity-->
     <string name="title_activity_map">Map</string>
-    ! <string name="tv_location_permission_denied">Please try again and grant access to use the location.</string>
-    ! <string name="tv_permission_required_toast">Location permission is required.</string>
+    !
+    <string name="tv_location_permission_denied">Please try again and grant access to use the location.</string>
+    !
+    <string name="tv_permission_required_toast">Location permission is required.</string>
     <string name="tv_sos_button_toast">Starting alert</string>
     <string name="tv_my_location_button_toast">MyLocation button clicked</string>
     <string name="tv_current_location">Current location:\n</string>
@@ -75,6 +77,12 @@
     <string name="tv_deny_permission">Permission denied</string>
     <string name="tv_recording">Recording...</string>
     <string name="tv_playing">Playing...</string>
+
+    <!--Contact Selector Activity-->
+    <string name="tv_select_contacts_title">Select your safe contact</string>
+    <string name="tv_add_contact_btn">Add contact</string>
+    <string name="tv_finish_set_up">Finish Set Up</string>
+    <string name="tv_select_contact_description">Choose a trustful person that will receive your SOS signal when needed.</string>
 
 
     <!--Generic Views-->
@@ -116,7 +124,6 @@
     <!--Other-->
     <string name="quota_exceeded">Quota exceeded.</string>
     <string name="tv_resend_code">Resend code in %d seconds</string>
-
 
 
 </resources>

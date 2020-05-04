@@ -41,7 +41,7 @@
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="24sp" />
+        android:textSize="28sp" />
 
     <TextView
         android:id="@+id/descriptionTV"
