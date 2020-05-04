@@ -51,7 +51,7 @@
                 android:background="@android:color/transparent"
                 android:fontFamily="@font/segoeuib"
                 android:includeFontPadding="false"
-                android:text="SHOW"
+                android:text="@string/tv_show"
                 android:textAllCaps="true"
                 android:textColor="@color/colorAccent"
                 android:textSize="12sp"
