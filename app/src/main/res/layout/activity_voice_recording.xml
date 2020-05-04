@@ -21,7 +21,7 @@
             android:id="@+id/recordBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/recordBtn"
+            android:text="@string/btn_record"
             android:layout_marginEnd="8dp"/>
 
         <Button
@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:text="@string/stop_recordBtn"
+            android:text="@string/btn_stop_record"
             />
 
         <Button
@@ -37,13 +37,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:text="@string/playBtn"/>
+            android:text="@string/btn_play"/>
 
         <Button
             android:id="@+id/stoprecordBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/stopBtn" />
+            android:text="@string/btn_stop" />
 
 
 
