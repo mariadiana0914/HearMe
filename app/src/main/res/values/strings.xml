@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">EnGuard</string>
 
+    <!--Facebook Strings-->
+    <string name="facebook_app_id">342643696697416</string>
+    <string name="fb_login_protocol_scheme">fb342643696697416</string>
+
+
     <!--Tutorial Activity Strings-->
     <string name="tutorial_activity_fragment_1_title">Welcome to EnGuard!</string>
     <string name="tutorial_activity_fragment_1_description">Create an account by signing up or connecting with Google or Facebook. Already have an account? Skip the tutorial and log in.</string>
