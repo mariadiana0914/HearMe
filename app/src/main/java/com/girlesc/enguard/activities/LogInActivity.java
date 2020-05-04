@@ -18,6 +18,10 @@ import com.girlesc.enguard.data.source.UserRepository;
 import com.girlesc.enguard.presenters.LogInPresenter;
 import com.girlesc.enguard.utils.ToastUtils;
 import com.girlesc.enguard.views.CustomEditText;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 
 import static com.google.android.gms.common.internal.Preconditions.checkNotNull;
 
@@ -79,6 +83,7 @@ public class LogInActivity extends AppCompatActivity implements LogInContract.Vi
             }
 
         });
+
     }
 
     @Override
