@@ -1,4 +1,4 @@
-package com.girlesc.enguard;
+package com.girlesc.enguard.common;
 
 public interface BasePresenter {
 
