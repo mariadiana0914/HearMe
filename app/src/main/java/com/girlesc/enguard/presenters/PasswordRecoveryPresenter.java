@@ -1,6 +1,5 @@
 package com.girlesc.enguard.presenters;
 
-import com.girlesc.enguard.BasePresenter;
 import com.girlesc.enguard.contracts.PasswordRecoveryContract;
 import com.girlesc.enguard.data.source.UserDataSource;
 import com.girlesc.enguard.data.source.UserRepository;

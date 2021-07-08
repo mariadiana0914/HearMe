@@ -1,7 +1,7 @@
 package com.girlesc.enguard.contracts;
 
-import com.girlesc.enguard.BasePresenter;
-import com.girlesc.enguard.BaseView;
+import com.girlesc.enguard.common.BasePresenter;
+import com.girlesc.enguard.common.BaseView;
 
 public interface LogInContract {
 
